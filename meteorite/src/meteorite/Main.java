@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("res/Starting.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("scene/Starting.fxml"));
         primaryStage.setTitle("Word Meteorite v.0.1");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

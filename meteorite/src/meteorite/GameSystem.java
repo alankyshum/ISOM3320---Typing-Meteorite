@@ -14,7 +14,6 @@ import javax.swing.*;
 import java.util.ListIterator;
 
 public class GameSystem {
-	@FXML private static Pane playground;
 	private static Text score_text;
 	private static Text lv_text;
 
@@ -137,7 +136,7 @@ public class GameSystem {
 
 	public static void load_to_word_list(int lv) throws IOException {
 		FileReader fr = new FileReader("word.txt");
-//		FileReader fr = new FileReader(Main.class.getResource("res/word.txt").toExternalForm());
+//		FileReader fr = new FileReader(Main.class.getResource("scene/word.txt").toExternalForm());
 
 		BufferedReader br = new BufferedReader(fr);
 		//System.out.println(br.readLine());
@@ -167,25 +166,13 @@ public class GameSystem {
 		word.drop();
 	}
 
-	public static void showText() {
-		score_text = new Text(820, 30, "Scores: 0");
-		lv_text = new Text(750, 30, "Level: 0");
-
-		playground.getChildren().addAll(score_text, lv_text);
-	}
-
-
-	public static void importPane(Pane pane) {
-		playground = pane;
-	}
-
 	public static void screen_update_score() {
-		score_text.setText("Scores: " + currPlayer.get_score());
+		Controller.score_text_static.setText("Scores: " + currPlayer.get_score());
 		System.out.println("Score: "+currPlayer.get_score());
 	}
 
 	public static void screen_update_lv() {
-		lv_text.setText("Level: " + currPlayer.get_lv());
+		Controller.lv_text_static.setText("Level: " + currPlayer.get_lv());
 		System.out.println("Level: "+currPlayer.get_lv());
 	}
 

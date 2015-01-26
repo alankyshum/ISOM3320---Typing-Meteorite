@@ -17,7 +17,7 @@
 
         <ImageView layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image backgroundLoading="true" url="@bg.jpg" />
+                <Image backgroundLoading="true" url="@../img/bg.jpg" />
             </image>
         </ImageView>
 

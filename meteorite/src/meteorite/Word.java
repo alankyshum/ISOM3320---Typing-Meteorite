@@ -24,16 +24,15 @@ public class Word {
     private Wrapper_info wrapper;
 
     // CONSTANTS
-    private final int BASE_DUR = 500000;
+    private final int BASE_DUR = 3000;
 
     // GLOBAL VARIABLES ACROSS CLASSES
     private HBox that_word;
-    private static Pane playground;
 
     public Word(Pos_info pos, double speed, String content) {
         this.drop_pt = pos;
         this.pos = pos;
-        this.drop_speed = speed/2;
+        this.drop_speed = speed;
         this.content = content;
         this.attack_pt = content.length();
 
@@ -47,27 +46,22 @@ public class Word {
         }
         that_word.getStyleClass().add("meteorite_wrapper");
 
-        playground.getChildren().add(that_word);
+        Controller.playground_statlc.getChildren().add(that_word);
         GameSystem.WORD_OBJ_LIST.add(this);
     }
 
     public void destroy() {
-        playground.getChildren().remove(that_word);
+        Controller.playground_statlc.getChildren().remove(that_word);
         GameSystem.WORD_OBJ_LIST.remove(this);
-    }
-
-    // Port playground here to class-scope
-    public static void importPane(Pane pane_ground) {
-        playground = pane_ground;
     }
 
     // Typed letter effect
     public void typed_letter(int pos, boolean typed) {
         if (typed)
-            ((Text)that_word.getChildren().get(pos)).getStyleClass().add("typed_text");
+            that_word.getChildren().get(pos).getStyleClass().add("typed_text");
         else
             that_word.getChildren().forEach(t-> {
-                ((Text)t).getStyleClass().remove("typed_text");
+                t.getStyleClass().remove("typed_text");
             });
     }
 

@@ -8,8 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -40,7 +38,7 @@ public class Driver {
             // get reference to the button's stage
             stage = (Stage) playBtn.getScene().getWindow();
 
-            root = FXMLLoader.load(getClass().getResource("res/Game_Play_Screen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("scene/Game_Play_Screen.fxml"));
             Scene gameplay_scene = new Scene(root, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
             gameplay_scene.getStylesheets().addAll(Main.class.getResource("css/master.css").toExternalForm());
 
@@ -68,9 +66,6 @@ public class Driver {
                 timeGen.setCycleCount(Timeline.INDEFINITE);
                 timeGen.play();
             }
-
-            // Show Text
-            GameSystem.showText();
 
         }
     }
