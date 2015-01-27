@@ -8,16 +8,28 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public static final int SCREEN_WIDTH = 900;
-    public static final int SCREEN_HEIGHT = 700;
+    class SCREEN {
+        public static final int HEIGHT = 900;
+        public static final int WIDTH = 500;
+    }
+
+    public static Stage STAGE;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("scene/Starting.fxml"));
-        primaryStage.setTitle("Word Meteorite v.0.1");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("scene/StartScreen.fxml"));
+        STAGE = primaryStage;
 
+        // set other information
+        STAGE.setTitle("Word Meteorite v.0.1");
+        STAGE.setScene(new Scene(root, SCREEN.WIDTH, SCREEN.HEIGHT));
+        STAGE.show();
+
+        // dynamically set screen size
+        STAGE.setMinHeight(Main.SCREEN.HEIGHT);
+        STAGE.setMinWidth(Main.SCREEN.WIDTH);
+        STAGE.setMaxHeight(Main.SCREEN.HEIGHT);
+        STAGE.setMaxWidth(Main.SCREEN.WIDTH);
     }
 
 

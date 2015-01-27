@@ -8,7 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 import java.util.ResourceBundle;
@@ -19,53 +19,29 @@ import java.io.IOException;
  */
 public class Driver {
 
-    @FXML
-    private ResourceBundle resources;
+    @FXML private ResourceBundle resources;
+    @FXML private Pane startingPage;
+    @FXML private Button playBtn;
+    @FXML private Button stopBtn;
 
     @FXML
-    private Button playBtn;
-    @FXML
-    private Button stopBtn;
+    private void game_start(ActionEvent event) throws IOException {
 
-    @FXML
-    private void game_start(ActionEvent event) throws IOException{
-
-        Stage stage;
         Parent root;
 
-        if (event.getSource()==playBtn){
+        if (event.getSource() == playBtn){
 
-            // get reference to the button's stage
-            stage = (Stage) playBtn.getScene().getWindow();
-
-            root = FXMLLoader.load(getClass().getResource("scene/Game_Play_Screen.fxml"));
-            Scene gameplay_scene = new Scene(root, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
-            gameplay_scene.getStylesheets().addAll(Main.class.getResource("css/master.css").toExternalForm());
+            root = FXMLLoader.load(getClass().getResource("scene/GamingScreen.fxml"));
+            Scene gameplay_scene = new Scene(root, Main.SCREEN.WIDTH, Main.SCREEN.HEIGHT);
 
             // load up other FXML document
-            stage.setScene(gameplay_scene);
-            stage.show();
+            Main.STAGE.setScene(gameplay_scene);
+            Main.STAGE.show();
 
             // key listener
-            stage.getScene().setOnKeyPressed(e-> {
+            Main.STAGE.getScene().setOnKeyPressed(e-> {
                 GameSystem.handle_key_press(e.getText().toUpperCase());
             });
-
-            // Create Player
-            GameSystem.create_player();
-
-            // Load Words + Generate Words
-            try {
-                GameSystem.load_to_word_list(GameSystem.currPlayer.get_lv());
-            } catch (IOException e) {
-                System.out.println(e);
-            } finally {
-                Timeline timeGen = new Timeline(new KeyFrame(Duration.seconds(1), e-> {
-                    GameSystem.spawn_n_drop_word();
-                }));
-                timeGen.setCycleCount(Timeline.INDEFINITE);
-                timeGen.play();
-            }
 
         }
     }
@@ -85,6 +61,16 @@ public class Driver {
         GameSystem.screen_update_score();
     }
 
-    public void game_shutdown(ActionEvent event) throws IOException{}
+    public void game_shutdown(ActionEvent event) throws IOException {
+
+    }
+
+    public void show_ranking(ActionEvent event) {
+        GameSystem.create_rating_chart();
+    }
+
+    public void mute_BGM(ActionEvent event) {
+
+    }
 
 }

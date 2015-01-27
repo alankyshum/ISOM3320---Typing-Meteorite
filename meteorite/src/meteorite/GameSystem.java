@@ -3,14 +3,8 @@ package meteorite;
 import java.util.ArrayList;
 import java.io.*;
 
-import javafx.animation.Interpolator;
-import javafx.animation.TranslateTransition;
-import javafx.fxml.FXML;
-import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
 
-import javax.swing.*;
 import java.util.ListIterator;
 
 public class GameSystem {
@@ -157,23 +151,22 @@ public class GameSystem {
 	}
 
 	public static void spawn_n_drop_word() {
-		int xpos = (int)(Math.random()*800);
-		int ypos = 0;
 		int word_index = (int)(Math.random() * (word_list.size() - 1));
-		Pos_info temp = new Pos_info(xpos, ypos);
+		int x = (int)(Math.random()*(Main.SCREEN.WIDTH-word_list.get(word_index).length()*10));
+		Pos_info temp = new Pos_info(x, 0);
 		Word word = new Word(temp, currPlayer.get_lv(), word_list.get(word_index));
 		WORD_OBJ_LIST.add(word);
 		word.drop();
 	}
 
 	public static void screen_update_score() {
-		Controller.score_text_static.setText("Scores: " + currPlayer.get_score());
-		System.out.println("Score: "+currPlayer.get_score());
+		PlayController.score_text_static.setText("Scores: " + currPlayer.get_score());
+//		System.out.println("Score: "+currPlayer.get_score());
 	}
 
 	public static void screen_update_lv() {
-		Controller.lv_text_static.setText("Level: " + currPlayer.get_lv());
-		System.out.println("Level: "+currPlayer.get_lv());
+		PlayController.lv_text_static.setText("Level: " + currPlayer.get_lv());
+//		System.out.println("Level: "+currPlayer.get_lv());
 	}
 
 

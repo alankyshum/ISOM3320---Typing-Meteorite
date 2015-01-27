@@ -9,6 +9,11 @@ public class Castle {
     private int hp;
     private Wrapper_info wrapper;
 
+    public Castle() {
+        hp = 100;
+        wrapper = new Wrapper_info(Main.SCREEN.WIDTH, 300);
+    }
+
     public void hp_change(){
         hp -= 10;
     }

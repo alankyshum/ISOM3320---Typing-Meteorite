@@ -1,3 +1,57 @@
+/* ========= START SCREEN */
+/* ====================== */
+
+/* PLAY BUTTON */
+/* ----------- */
+Button.material_btn {
+    /*-fx-background-color: #00a277;*/
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #12a48c 0%, #119068 100%), #239d68, #3bdb8b, radial-gradient(center 50% 50%, radius 100%, #3bdba8, #2cc796);
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.7em;
+    -fx-font-family: "Century Gothic";
+    -fx-text-fill: #fff;
+    -fx-background-radius: 8;
+    -fx-padding: 8 30 12 30;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+Button.material_btn:hover {
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(one-pass-box, #1d1d1d, 0, 1, 0, 0);
+}
+Button.material_btn:pressed {
+  -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+/* TOGGLE BUTTON */
+/* ------------- */
+ToggleButton.mute_btn {
+  -fx-background-color: rgba(0, 0, 0, 0);
+  -fx-background-image: url('../img/unmute.png');
+  -fx-background-size: stretch;
+  -fx-background-size: 20;
+  -fx-padding: 10;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+ToggleButton.mute_btn:selected {
+  -fx-background-image: url('../img/mute.png');
+}
+ToggleButton.mute_btn::after {
+  content: "BG Music";
+}
+
+/* BACKGROUND */
+/* ---------- */
+.startScreen_bg {
+	-fx-background-color: #ff9d00;
+}
+
+
+/* ========= GMAEPLAY SCREEN */
+/* ========================= */
+
 /* TEXT IN METEORITE */
 /* ----------------- */
 Text {
@@ -15,7 +69,6 @@ Text.typed_text {
 /* ----------------- */
 .meteorite_wrapper {
     -fx-background-image: url('../img/meteorite.png');
-    /*-fx-background-image: url('../img/bomb_1.png');*/
     -fx-background-size: stretch;
     -fx-background-position: center;
     -fx-padding: 10;

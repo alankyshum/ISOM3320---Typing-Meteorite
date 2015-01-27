@@ -3,24 +3,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.text.Text?>
-<Pane fx:id="playground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meteorite.Controller">
+<?import java.net.URL?>
+<Pane fx:id="playground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meteorite.PlayController">
     <children>
-
         <ImageView layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image backgroundLoading="true" url="@../img/test.png" />
             </image>
         </ImageView>
-
         <ImageView fx:id="troop" layoutX="-100" layoutY="40">
             <image>
                 <Image url="@../img/troop.png" />
             </image>
         </ImageView>
-
-        <Text fx:id="score_text" layoutX="820" layoutY="30" text="Scores: 0"/>
-        <Text fx:id="lv_text" layoutX="750" layoutY="30" text="Level: 0"/>
-
+        <Text fx:id="score_text" text="Scores: 0"/>
+        <Text fx:id="lv_text" text="Level: 0"/>
     </children>
+
+    <stylesheets>
+        <URL value="@../css/master.css" />
+    </stylesheets>
 </Pane>
 

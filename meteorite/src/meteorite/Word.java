@@ -2,11 +2,7 @@ package meteorite;
 
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -32,7 +28,7 @@ public class Word {
     public Word(Pos_info pos, double speed, String content) {
         this.drop_pt = pos;
         this.pos = pos;
-        this.drop_speed = speed;
+        this.drop_speed = speed/5;
         this.content = content;
         this.attack_pt = content.length();
 
@@ -46,12 +42,12 @@ public class Word {
         }
         that_word.getStyleClass().add("meteorite_wrapper");
 
-        Controller.playground_statlc.getChildren().add(that_word);
+        PlayController.playground_statlc.getChildren().add(that_word);
         GameSystem.WORD_OBJ_LIST.add(this);
     }
 
     public void destroy() {
-        Controller.playground_statlc.getChildren().remove(that_word);
+        PlayController.playground_statlc.getChildren().remove(that_word);
         GameSystem.WORD_OBJ_LIST.remove(this);
     }
 
@@ -74,7 +70,7 @@ public class Word {
 //        System.out.println(playground.getChildren());
 
         TranslateTransition tf = new TranslateTransition(Duration.millis(BASE_DUR/this.drop_speed), that_word);
-        tf.setToY(Main.SCREEN_HEIGHT);
+        tf.setToY(Main.SCREEN.HEIGHT);
         tf.setCycleCount(1);
         tf.setAutoReverse(false);
         tf.setInterpolator(Interpolator.SPLINE(0.3, 0, 1, 1));
