@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     class SCREEN {
-        public static final int HEIGHT = 900;
-        public static final int WIDTH = 500;
+        public static final int HEIGHT = 935;
+        public static final int WIDTH = 515;
     }
 
     public static Stage STAGE;

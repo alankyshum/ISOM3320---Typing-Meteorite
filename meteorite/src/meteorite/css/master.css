@@ -44,7 +44,7 @@ ToggleButton.mute_btn::after {
 
 /* BACKGROUND */
 /* ---------- */
-.startScreen_bg {
+.startScreen_bg, .playScreen_bg {
 	-fx-background-color: #ff9d00;
 }
 
@@ -52,25 +52,50 @@ ToggleButton.mute_btn::after {
 /* ========= GMAEPLAY SCREEN */
 /* ========================= */
 
+/* SCREEN TEXT */
+/* ----------- */
+.screen_text {
+  -fx-fill: #fff;
+  -fx-stroke-width: 1;
+  -fx-font-size: 1.5em;
+  -fx-font-family: "Edit Undo BRK";
+  -fx-effect: none;
+}
+
 /* TEXT IN METEORITE */
 /* ----------------- */
 Text {
-    -fx-font-family: "Impact";
+    /*-fx-font-family: "Blitzwing";*/
+    /*-fx-font-family: "MineCrafter 3";*/
+    -fx-font-family: "Coburn";
     -fx-font-size: 1.3em;
     -fx-fill: #fff;
-    -fx-font-weight: bolder;
-    -fx-effect: innershadow(one-pass-box, #000, 0, 1, 1, 1);
+    /*-fx-font-weight: bolder;*/
+    /*-fx-effect: innershadow(one-pass-box, #000, 0, 1, 1, 1);*/
 }
 Text.typed_text {
-    -fx-fill: #f00;
+    -fx-fill: #900;
 }
 
 /* METEORITE WRAPPER */
 /* ----------------- */
-.meteorite_wrapper {
+/*.meteorite_wrapper {
     -fx-background-image: url('../img/meteorite.png');
     -fx-background-size: stretch;
     -fx-background-position: center;
     -fx-padding: 10;
     -fx-effect: dropshadow(one-pass-box, #000, 10, 0.3, 0, 1);
+}*/
+
+
+/* STAR */
+/* ---- */
+Rectangle.star {
+  -fx-fill: #fff;
+}
+
+/* HP BAR */
+/* ------ */
+.hp_bar {
+
 }

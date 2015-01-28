@@ -23,11 +23,20 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
-            <ImageView fitHeight="464.0" fitWidth="688.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/Logo.png" />
-               </image>
-            </ImageView>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                   <ImageView fx:id="logo_meteor" fitHeight="464.0" fitWidth="688.0" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../img/Logo_meteor.png" />
+                       </image>
+                   </ImageView>
+                  <ImageView fx:id="logo_text" fitHeight="464.0" fitWidth="688.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Logo_text.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
          </children>
       </HBox>
       <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
