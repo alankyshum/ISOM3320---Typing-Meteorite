@@ -2,6 +2,7 @@ package meteorite;
 
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -12,80 +13,90 @@ import javafx.util.Duration;
 public class Word {
 
     // ATTRIBUTES
-    private Pos_info drop_pt;
+    public Pos_info pos;
+    public Wrapper_info wrapper;
+
     private double drop_speed;
-    private Pos_info pos;
+    private double drop_duration;
     private String content;
     private int attack_pt;
-    private Wrapper_info wrapper;
-
-    // CONSTANTS
-    private final int BASE_DUR = 3000;
 
     // GLOBAL VARIABLES ACROSS CLASSES
-    private HBox that_word;
+    private FlowPane that_word;
 
-    public Word(Pos_info pos, double speed, String content) {
-        this.drop_pt = pos;
+    // ANIMATION
+    public TranslateTransition drop_tt;
+
+    public Word(Pos_info pos, double level, String content) {
         this.pos = pos;
-        this.drop_speed = speed/5;
+        this.drop_duration = Math.max(Main.DROP_DUR_BASE - this.drop_speed, 300);
+        this.drop_speed = Main.SCREEN.HEIGHT/this.drop_duration;
         this.content = content;
         this.attack_pt = content.length();
+        that_word = new FlowPane();
+        that_word.setLayoutX(this.pos.x);
+        that_word.setLayoutY(this.pos.y);
 
-        that_word = new HBox();
-        that_word.setLayoutX(this.drop_pt.x);
-        that_word.setLayoutY(this.drop_pt.y);
+        double height = 0; double width = 0;
         for (char ch: content.toCharArray()) {
             Text tmp = new Text(0, 0, Character.toString(ch));
             tmp.getStyleClass().add("default_text");
             that_word.getChildren().add(tmp);
+            if (tmp.getBoundsInParent().getHeight() > height)
+                height = tmp.getBoundsInParent().getHeight();
+            width += tmp.getBoundsInParent().getWidth();
         }
+        this.wrapper = new Wrapper_info(Math.round(width), Math.round(height));
         that_word.getStyleClass().add("meteorite_wrapper");
 
-        PlayController.playground_statlc.getChildren().add(that_word);
+        PlayController.word_layer_static.getChildren().add(that_word);
         GameSystem.WORD_OBJ_LIST.add(this);
     }
 
-    public void destroy() {
-        PlayController.playground_statlc.getChildren().remove(that_word);
+    public void destroy(boolean hitCastle) {
+        if (hitCastle) {
+            Castle.hp_down(this.attack_pt);
+        } else {
+//            Castle.shootWord(this);
+            GameSystem.currPlayer.score_up(this.attack_pt);
+            GameSystem.currPlayer.checkLv();
+        }
+        if (!(this instanceof BossWord))
+            drop_tt.setOnFinished(e-> {});
+        PlayController.word_layer_static.getChildren().remove(that_word);
         GameSystem.WORD_OBJ_LIST.remove(this);
     }
 
     // Typed letter effect
     public void typed_letter(int pos, boolean typed) {
-        if (typed)
-            that_word.getChildren().get(pos).getStyleClass().add("typed_text");
-        else
+        if (typed) {
+            if (pos == -1) {
+                that_word.getChildren().forEach(t-> {
+                    t.getStyleClass().add("typed_text");
+                });
+            } else {
+                that_word.getChildren().get(pos).getStyleClass().add("typed_text");
+            }
+        } else {
             that_word.getChildren().forEach(t-> {
                 t.getStyleClass().remove("typed_text");
             });
-    }
-
-    public boolean check_hit() {
-        return false;
+        }
     }
 
     public void drop() {
-
-//        System.out.println(playground.getChildren());
-
-        TranslateTransition tf = new TranslateTransition(Duration.millis(BASE_DUR/this.drop_speed), that_word);
-        tf.setToY(Main.SCREEN.HEIGHT);
-        tf.setCycleCount(1);
-        tf.setAutoReverse(false);
-        tf.setInterpolator(Interpolator.SPLINE(0.3, 0, 1, 1));
-        tf.setOnFinished(e-> {
-            this.destroy();
+        drop_tt = new TranslateTransition(Duration.millis(drop_duration), that_word);
+        drop_tt.setToY(Castle.pos.y + Castle.wrapper.height - wrapper.height);
+        drop_tt.setCycleCount(1);
+        drop_tt.setAutoReverse(false);
+        drop_tt.setInterpolator(Interpolator.SPLINE(0.3, 0, 1, 1));
+        drop_tt.setOnFinished(e -> {
+            this.destroy(true);
         });
-        tf.play();
-
-    }
-
-    public Pos_info get_pos() {
-        return this.pos;
+        drop_tt.play();
     }
 
     public String get_content() { return this.content; }
 
-    public HBox get_word_obj() { return this.that_word; }
+    public FlowPane get_word_obj() { return this.that_word; }
 }

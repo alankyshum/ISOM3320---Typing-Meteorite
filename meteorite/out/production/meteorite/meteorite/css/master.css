@@ -1,7 +1,6 @@
-/* ========= START SCREEN */
+/* =============== GLOBAL */
 /* ====================== */
-
-/* PLAY BUTTON */
+/* BUTTONS */
 /* ----------- */
 Button.material_btn {
     /*-fx-background-color: #00a277;*/
@@ -12,8 +11,13 @@ Button.material_btn {
     -fx-font-family: "Century Gothic";
     -fx-text-fill: #fff;
     -fx-background-radius: 8;
-    -fx-padding: 8 30 12 30;
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+Button.material_btn-small {
+    -fx-padding: 4 10 8 10;
+}
+Button.material_btn-big {
+    -fx-padding: 8 30 12 30;
 }
 Button.material_btn:hover {
   -fx-cursor: hand;
@@ -22,6 +26,17 @@ Button.material_btn:hover {
 Button.material_btn:pressed {
   -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
 }
+
+.pixel_word {
+  -fx-font-family: "Edit Undo BRK";
+}
+
+.title {
+  -fx-font-size: 3em;
+}
+
+/* ========= START SCREEN */
+/* ====================== */
 
 /* TOGGLE BUTTON */
 /* ------------- */
@@ -58,7 +73,6 @@ ToggleButton.mute_btn::after {
   -fx-fill: #fff;
   -fx-stroke-width: 1;
   -fx-font-size: 1.5em;
-  -fx-font-family: "Edit Undo BRK";
   -fx-effect: none;
 }
 
@@ -70,23 +84,16 @@ Text {
     -fx-font-family: "Coburn";
     -fx-font-size: 1.3em;
     -fx-fill: #fff;
-    /*-fx-font-weight: bolder;*/
-    /*-fx-effect: innershadow(one-pass-box, #000, 0, 1, 1, 1);*/
 }
 Text.typed_text {
     -fx-fill: #900;
 }
 
-/* METEORITE WRAPPER */
-/* ----------------- */
-/*.meteorite_wrapper {
-    -fx-background-image: url('../img/meteorite.png');
-    -fx-background-size: stretch;
-    -fx-background-position: center;
-    -fx-padding: 10;
-    -fx-effect: dropshadow(one-pass-box, #000, 10, 0.3, 0, 1);
-}*/
-
+/* MESSAGE */
+/* ------- */
+Text.msg {
+  -fx-font-size: 2em;
+}
 
 /* STAR */
 /* ---- */
@@ -94,8 +101,18 @@ Rectangle.star {
   -fx-fill: #fff;
 }
 
-/* HP BAR */
-/* ------ */
-.hp_bar {
 
+/* ====== GMAEPLAY POP PANEL */
+/* ========================= */
+TextField {
+  -fx-border-color: #222;
+  -fx-border-width: 3;
+  -fx-border-style: solid;
+}
+
+.endGamePanel {
+  -fx-border-radius: 5;
+  -fx-border-width: 3;
+  -fx-border-style: solid;
+  -fx-background-color: rgba(255, 255, 255, 0.3);
 }
