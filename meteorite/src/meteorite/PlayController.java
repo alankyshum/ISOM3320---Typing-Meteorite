@@ -168,7 +168,11 @@ public class PlayController {
         } else {
             genWordTimer.pause();
             GameSystem.WORD_OBJ_LIST.forEach(w -> {
-                w.drop_tt.pause();
+                if (w instanceof BossWord) {
+                    ((BossWord)w).drop_tt.pause();
+                } else {
+                    w.drop_tt.pause();
+                }
                 w.get_word_obj().setEffect(new GaussianBlur(7));
             });
             stopBtn.setText("|>");
