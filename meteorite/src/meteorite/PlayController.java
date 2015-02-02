@@ -1,10 +1,10 @@
 package meteorite;
 
-import javafx.animation.*;
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.GaussianBlur;
@@ -20,33 +20,9 @@ import java.io.IOException;
 
 public class PlayController {
 
-    /* ================ */
-    /* TRACKERS ======= */
-    /* ================ */
-    private Timeline genWordTimer;
     public static Timeline genWordTimer_static;
-    private static boolean gameStopped = false;
-
-    /* ======================= */
-    /* VARIABLES AND CONST === */
-    /* ======================= */
-    @FXML private HBox lava;
-    @FXML private Pane playground;
-    @FXML private Pane word_layer;
-    @FXML private Text score_text;
-    @FXML private Text lv_text;
-    @FXML private Text msg;
-    @FXML private VBox castle;
-    @FXML private Rectangle hp_bar;
-    @FXML private Button stopBtn;
-    @FXML private Button saveBtn;
-    @FXML private VBox endGamePanel;
-    @FXML private Text scoreText_final;
-    @FXML private Text levelText_final;
-    @FXML private TextField playerName;
     // Static property for static fx access
     public static Pane playground_static;
-
     public static Pane word_layer_static;
     public static Text score_text_static;
     public static Text lv_text_static;
@@ -57,28 +33,82 @@ public class PlayController {
     public static Text scoreText_final_static;
     public static Text levelText_final_static;
     public static TextField playerName_static;
-
+    @FXML
+    public static ImageView outerTree1_static;
+    @FXML
+    public static ImageView outerTree2_static;
+    @FXML
+    public static ImageView outerTree3_static;
+    @FXML
+    public static ImageView outerTree4_static;
+    @FXML
+    public static ImageView innerTree1_static;
+    @FXML
+    public static ImageView innerTree2_static;
+    @FXML
+    public static ImageView sphinx_static;
+    @FXML
+    public static ImageView eiffelTower_static;
+    @FXML
+    public static ImageView castleImg_static;
+    private static boolean gameStopped = false;
+    /* ================ */
+    /* TRACKERS ======= */
+    /* ================ */
+    private Timeline genWordTimer;
+    /* ======================= */
+    /* VARIABLES AND CONST === */
+    /* ======================= */
+    @FXML
+    private HBox lava;
+    @FXML
+    private Pane playground;
+    @FXML
+    private Pane word_layer;
+    @FXML
+    private Text score_text;
+    @FXML
+    private Text lv_text;
+    @FXML
+    private Text msg;
+    @FXML
+    private VBox castle;
+    @FXML
+    private Rectangle hp_bar;
+    @FXML
+    private Button stopBtn;
+    @FXML
+    private Button saveBtn;
+    @FXML
+    private VBox endGamePanel;
+    @FXML
+    private Text scoreText_final;
+    @FXML
+    private Text levelText_final;
+    @FXML
+    private TextField playerName;
     // HP related animation elements
-    @FXML private ImageView outerTree1;
-    @FXML private ImageView outerTree2;
-    @FXML private ImageView outerTree3;
-    @FXML private ImageView outerTree4;
-    @FXML private ImageView innerTree1;
-    @FXML private ImageView innerTree2;
-    @FXML private ImageView sphinx;
-    @FXML private ImageView eiffelTower;
-    @FXML private ImageView castleImg;
-    @FXML public static ImageView outerTree1_static;
-    @FXML public static ImageView outerTree2_static;
-    @FXML public static ImageView outerTree3_static;
-    @FXML public static ImageView outerTree4_static;
-    @FXML public static ImageView innerTree1_static;
-    @FXML public static ImageView innerTree2_static;
-    @FXML public static ImageView sphinx_static;
-    @FXML public static ImageView eiffelTower_static;
-    @FXML public static ImageView castleImg_static;
+    @FXML
+    private ImageView outerTree1;
+    @FXML
+    private ImageView outerTree2;
+    @FXML
+    private ImageView outerTree3;
+    @FXML
+    private ImageView outerTree4;
+    @FXML
+    private ImageView innerTree1;
+    @FXML
+    private ImageView innerTree2;
+    @FXML
+    private ImageView sphinx;
+    @FXML
+    private ImageView eiffelTower;
+    @FXML
+    private ImageView castleImg;
 
-    @FXML void initialize() {
+    @FXML
+    void initialize() {
 
         castle_static = castle;
         new Castle();
@@ -124,7 +154,7 @@ public class PlayController {
         } catch (IOException e) {
             System.out.println(e);
         } finally {
-            genWordTimer = new Timeline(new KeyFrame(Duration.seconds(Main.GEN_WORD_INTERVAL), e-> {
+            genWordTimer = new Timeline(new KeyFrame(Duration.seconds(Main.GEN_WORD_INTERVAL), e -> {
                 GameSystem.spawn_n_drop_word();
             }));
             genWordTimer.setCycleCount(Timeline.INDEFINITE);
@@ -133,18 +163,18 @@ public class PlayController {
         }
 
         // animate background stars
-        Timeline genStar = new Timeline(new KeyFrame(Duration.seconds(0.7), e-> {
+        Timeline genStar = new Timeline(new KeyFrame(Duration.seconds(0.7), e -> {
             Rectangle star = new Rectangle();
             star.setWidth(5);
             star.setHeight(5);
             star.getStyleClass().add("star");
-            star.setLayoutX(Math.random()*Main.SCREEN.WIDTH);
-            star.setLayoutY(Math.random()*(Main.SCREEN.HEIGHT*0.6));
+            star.setLayoutX(Math.random() * Main.SCREEN.WIDTH);
+            star.setLayoutY(Math.random() * (Main.SCREEN.HEIGHT * 0.6));
             word_layer.getChildren().add(star);
             FadeTransition star_ft = new FadeTransition(Duration.seconds(10), star);
             star_ft.setToValue(0);
             star_ft.setCycleCount(1);
-            star_ft.setOnFinished(ev-> {
+            star_ft.setOnFinished(ev -> {
                 word_layer.getChildren().remove(star);
             });
             star_ft.play();
@@ -153,7 +183,8 @@ public class PlayController {
         genStar.play();
     }
 
-    @FXML public void pauseGame() {
+    @FXML
+    public void pauseGame() {
         if (gameStopped) {
             stopBtn.setText("||");
             genWordTimer.play();
@@ -169,7 +200,7 @@ public class PlayController {
             genWordTimer.pause();
             GameSystem.WORD_OBJ_LIST.forEach(w -> {
                 if (w instanceof BossWord) {
-                    ((BossWord)w).drop_tt.pause();
+                    ((BossWord) w).drop_tt.pause();
                 } else {
                     w.drop_tt.pause();
                 }
@@ -177,20 +208,23 @@ public class PlayController {
             });
             stopBtn.setText("|>");
             gameStopped = true;
-            Main.STAGE.getScene().setOnKeyPressed(e -> {});
+            Main.STAGE.getScene().setOnKeyPressed(e -> {
+            });
         }
     }
 
-    @FXML public void endGame() {
+    @FXML
+    public void endGame() {
         GameSystem.game_end();
     }
 
-    @FXML public void backHome() {
+    @FXML
+    public void backHome() {
         Driver dr = new Driver();
 
         TranslateTransition panelTT = new TranslateTransition(Duration.seconds(1), PlayController.endGamePanel_static);
         panelTT.setByY(Main.SCREEN.HEIGHT / 2 + 100);
-        panelTT.setOnFinished(e-> {
+        panelTT.setOnFinished(e -> {
             // Bug in JavaFx, needa load twice to by-pass loadException
             try {
                 dr.load_scene("start");
@@ -206,7 +240,8 @@ public class PlayController {
         panelTT.play();
     }
 
-    @FXML public void savePlayer() {
+    @FXML
+    public void savePlayer() {
         String name = playerName.getText();
         if (name.length() > 15) {
             name = name.substring(0, 15) + "...";
@@ -220,7 +255,8 @@ public class PlayController {
         saveBtn.setDisable(true);
     }
 
-    @FXML public void hoverSoundFx() {
+    @FXML
+    public void hoverSoundFx() {
         SoundSystem.buttonSoundEffect.play(0.3);
     }
 }

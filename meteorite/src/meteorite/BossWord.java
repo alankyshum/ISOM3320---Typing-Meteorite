@@ -3,8 +3,6 @@ package meteorite;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Pos;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
 /**
@@ -25,7 +23,7 @@ public class BossWord extends Word {
 
     @Override
     public void drop() {
-        drop_tt = new Timeline(new KeyFrame(Duration.seconds(1), e-> {
+        drop_tt = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
             this.get_word_obj().setLayoutY(this.get_word_obj().getLayoutY() + 10);
             if (this.get_word_obj().getBoundsInParent().getMaxY() >= PlayController.castle_static.getBoundsInParent().getMinY()) {
                 this.destroy(true);

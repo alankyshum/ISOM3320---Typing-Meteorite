@@ -26,8 +26,9 @@ public class Castle {
         hp = 100;
         hp_bind = new SimpleDoubleProperty(Main.SCREEN.WIDTH);
 
-        double width = 0; double height = 0;
-        for (Node building: PlayController.castle_static.getChildren()) {
+        double width = 0;
+        double height = 0;
+        for (Node building : PlayController.castle_static.getChildren()) {
             if (building.getBoundsInParent().getHeight() > height)
                 height = building.getBoundsInParent().getHeight();
             width += building.getBoundsInParent().getWidth();
@@ -41,7 +42,7 @@ public class Castle {
         hp -= decrement;
         ParallelTransition pt;
         FadeTransition ft_1, ft_2;
-        switch (hp/10) {
+        switch (hp / 10) {
             case 0:
             case 1:
                 // coming to the end of life, enjoy
@@ -74,7 +75,7 @@ public class Castle {
                 ft_1 = new FadeTransition(Duration.seconds(Main.FADEOUTTIME), PlayController.sphinx_static);
                 ft_1.setToValue(0);
                 ft_1.setCycleCount(1);
-                ft_1.setOnFinished(e-> {
+                ft_1.setOnFinished(e -> {
                     PlayController.playground_static.getChildren().remove(PlayController.sphinx_static);
                 });
                 ft_1.play();
@@ -84,7 +85,7 @@ public class Castle {
                 ft_1 = new FadeTransition(Duration.seconds(Main.FADEOUTTIME), PlayController.eiffelTower_static);
                 ft_1.setToValue(0);
                 ft_1.setCycleCount(1);
-                ft_1.setOnFinished(e-> {
+                ft_1.setOnFinished(e -> {
                     PlayController.playground_static.getChildren().remove(PlayController.eiffelTower_static);
                 });
                 ft_1.play();
@@ -93,7 +94,7 @@ public class Castle {
                 ft_1 = new FadeTransition(Duration.seconds(Main.FADEOUTTIME), PlayController.outerTree3_static);
                 ft_1.setToValue(0);
                 ft_1.setCycleCount(1);
-                ft_1.setOnFinished(e-> {
+                ft_1.setOnFinished(e -> {
                     PlayController.playground_static.getChildren().remove(PlayController.outerTree3_static);
                 });
                 ft_2 = new FadeTransition(Duration.seconds(Main.FADEOUTTIME), PlayController.outerTree4_static);
@@ -121,7 +122,7 @@ public class Castle {
                 pt = new ParallelTransition(ft_1, ft_2);
                 pt.play();
         }
-        hp_bind.set(Main.SCREEN.WIDTH*hp/100);
+        hp_bind.set(Main.SCREEN.WIDTH * hp / 100);
         if (hp <= 0) {
             if (!GameSystem.gameOver) {
                 GameSystem.game_end();
@@ -137,7 +138,7 @@ public class Castle {
     public static void hp_up() {
         // called only when level up
         hp = 100;
-        hp_bind.set(Main.SCREEN.WIDTH*hp/100);
+        hp_bind.set(Main.SCREEN.WIDTH * hp / 100);
     }
 
     public static void shootWord(Word target) {
@@ -157,15 +158,15 @@ public class Castle {
         PlayController.word_layer_static.getChildren().add(bullet);
 
         Path shootPath = new Path();
-        shootPath.getElements().add(new MoveTo(Math.round(pos.x+wrapper.width/2), Math.round(pos.y + wrapper.height / 2)));
+        shootPath.getElements().add(new MoveTo(Math.round(pos.x + wrapper.width / 2), Math.round(pos.y + wrapper.height / 2)));
         if (target instanceof BossWord) {
-            shootPath.getElements().add(new LineTo(target.get_word_obj().getBoundsInParent().getMinX()+target.get_word_obj().getBoundsInParent().getWidth()/2, target.get_word_obj().getBoundsInParent().getMinY()+target.get_word_obj().getBoundsInParent().getHeight()/2));
+            shootPath.getElements().add(new LineTo(target.get_word_obj().getBoundsInParent().getMinX() + target.get_word_obj().getBoundsInParent().getWidth() / 2, target.get_word_obj().getBoundsInParent().getMinY() + target.get_word_obj().getBoundsInParent().getHeight() / 2));
         } else {
-            shootPath.getElements().add(new LineTo( target.pos.x + target.wrapper.width / 2, (target.drop_tt.getNode().getBoundsInParent().getMinY() + target.drop_tt.getNode().getBoundsInParent().getMaxY())/2 ));
+            shootPath.getElements().add(new LineTo(target.pos.x + target.wrapper.width / 2, (target.drop_tt.getNode().getBoundsInParent().getMinY() + target.drop_tt.getNode().getBoundsInParent().getMaxY()) / 2));
         }
         PathTransition shootPT = new PathTransition(Duration.seconds(0.5), shootPath, bullet);
         shootPT.setInterpolator(new SplineInterpolator(0.1, 0, 1, 0));
-        shootPT.setOnFinished(e-> {
+        shootPT.setOnFinished(e -> {
             ScaleTransition enlargeBomb = new ScaleTransition(Duration.seconds(0.5), bullet);
             enlargeBomb.setByX(10);
             enlargeBomb.setByY(10);

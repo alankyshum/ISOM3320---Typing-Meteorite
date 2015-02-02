@@ -1,13 +1,13 @@
 package meteorite;
 
-import javafx.animation.*;
-import javafx.collections.ObservableArray;
+import javafx.animation.Interpolator;
+import javafx.animation.ParallelTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,26 +20,33 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 
 /**
  * Created by teddy on 21/1/15.
  */
 public class Driver {
-    // Tracker
-    public static boolean muted = false;
     // Constants
     public static final int SEC_DUR = 1;
-
-    @FXML private Button playBtn;
-    @FXML private Button rankBtn;
-    @FXML private ToggleButton muteBtn;
-    @FXML private Button backBtn;
-    @FXML private ImageView logo_text;
-    @FXML private ImageView logo_meteor;
-    @FXML private VBox rankingChart;
-    @FXML private Text rankingTitle;
-    @FXML private Text rankingSubtitle;
+    // Tracker
+    public static boolean muted = false;
+    @FXML
+    private Button playBtn;
+    @FXML
+    private Button rankBtn;
+    @FXML
+    private ToggleButton muteBtn;
+    @FXML
+    private Button backBtn;
+    @FXML
+    private ImageView logo_text;
+    @FXML
+    private ImageView logo_meteor;
+    @FXML
+    private VBox rankingChart;
+    @FXML
+    private Text rankingTitle;
+    @FXML
+    private Text rankingSubtitle;
 
     /* ======== HELPER FX */
     /* ================== */
@@ -81,11 +88,13 @@ public class Driver {
     /* ======== FXML FX */
     /* ================ */
 
-    @FXML public void hoverSoundFx() {
+    @FXML
+    public void hoverSoundFx() {
         SoundSystem.buttonSoundEffect.play(0.3);
     }
 
-    @FXML public void initialize() {
+    @FXML
+    public void initialize() {
         // reposition logo
         logo_text.setTranslateX(Main.SCREEN.WIDTH);
         logo_meteor.setTranslateX(-Main.SCREEN.WIDTH);
@@ -96,13 +105,13 @@ public class Driver {
         TranslateTransition tt_meteor = new TranslateTransition(Duration.seconds(SEC_DUR), logo_meteor);
         tt_meteor.setInterpolator(Interpolator.SPLINE(0.3, 0, 0.2, 1));
         tt_meteor.setToX(0);
-        TranslateTransition rank_tt = new TranslateTransition(Duration.seconds(SEC_DUR+0.5), rankBtn);
+        TranslateTransition rank_tt = new TranslateTransition(Duration.seconds(SEC_DUR + 0.5), rankBtn);
         rank_tt.setFromX(Main.SCREEN.WIDTH);
         rank_tt.setToX(0);
-        TranslateTransition play_tt = new TranslateTransition(Duration.seconds(SEC_DUR+0.5), playBtn);
+        TranslateTransition play_tt = new TranslateTransition(Duration.seconds(SEC_DUR + 0.5), playBtn);
         play_tt.setFromX(-Main.SCREEN.WIDTH);
         play_tt.setToX(0);
-        TranslateTransition mute_tt = new TranslateTransition(Duration.seconds(SEC_DUR+1), muteBtn);
+        TranslateTransition mute_tt = new TranslateTransition(Duration.seconds(SEC_DUR + 1), muteBtn);
         mute_tt.setFromY(Main.SCREEN.HEIGHT);
         mute_tt.setToY(0);
         ParallelTransition fadeOut = new ParallelTransition(tt_txt, tt_meteor, rank_tt, play_tt, mute_tt);
@@ -150,11 +159,11 @@ public class Driver {
 
         TranslateTransition img_tt = new TranslateTransition(Duration.seconds(SEC_DUR), logo_meteor);
         img_tt.setByX(-Main.SCREEN.WIDTH);
-        TranslateTransition rank_tt = new TranslateTransition(Duration.seconds(SEC_DUR+0.5), rankBtn);
+        TranslateTransition rank_tt = new TranslateTransition(Duration.seconds(SEC_DUR + 0.5), rankBtn);
         rank_tt.setByX(Main.SCREEN.WIDTH);
-        TranslateTransition play_tt = new TranslateTransition(Duration.seconds(SEC_DUR+0.5), playBtn);
+        TranslateTransition play_tt = new TranslateTransition(Duration.seconds(SEC_DUR + 0.5), playBtn);
         play_tt.setByX(-Main.SCREEN.WIDTH);
-        TranslateTransition mute_tt = new TranslateTransition(Duration.seconds(SEC_DUR+1), muteBtn);
+        TranslateTransition mute_tt = new TranslateTransition(Duration.seconds(SEC_DUR + 1), muteBtn);
         mute_tt.setToY(Main.SCREEN.HEIGHT);
         ParallelTransition fadeOut = new ParallelTransition(logo_tt, img_tt, rank_tt, play_tt, mute_tt);
         fadeOut.play();
@@ -174,7 +183,7 @@ public class Driver {
         TranslateTransition mute_tt = new TranslateTransition(Duration.seconds(SEC_DUR), muteBtn);
         mute_tt.setToY(Main.SCREEN.HEIGHT);
         ParallelTransition fadeOut = new ParallelTransition(logo_tt, img_tt, play_tt, rank_tt, mute_tt);
-        fadeOut.setOnFinished(e-> {
+        fadeOut.setOnFinished(e -> {
             // load scene
             try {
                 load_scene("ranking");
@@ -218,7 +227,8 @@ public class Driver {
         fadeOut.play();
     }
 
-    @FXML public void backToStart(ActionEvent event) {
+    @FXML
+    public void backToStart(ActionEvent event) {
         TranslateTransition rankTitleTT = new TranslateTransition(Duration.seconds(SEC_DUR), rankingTitle);
         rankTitleTT.setToY(-500);
         TranslateTransition rankSubtitleTT = new TranslateTransition(Duration.seconds(SEC_DUR), rankingSubtitle);

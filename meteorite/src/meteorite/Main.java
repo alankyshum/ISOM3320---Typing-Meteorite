@@ -13,16 +13,14 @@ public class Main extends Application {
     public static final int LV_UP_THRESHOLD = 20;
     public static final double GEN_WORD_INTERVAL = 1.5; // Time interval to generate words
     public static final double FADEOUTTIME = 1.5; // Time to fadeout destroyed item
-
-    class SCREEN {
-        public static final int HEIGHT = 935;
-        public static final int WIDTH = 515;
-    }
-
     public static Stage STAGE;
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("scene/StartScreen.fxml"));
         STAGE = primaryStage;
 
@@ -38,8 +36,8 @@ public class Main extends Application {
         STAGE.setMaxWidth(Main.SCREEN.WIDTH);
     }
 
-
-    public static void main(String[] args) {
-        launch(args);
+    class SCREEN {
+        public static final int HEIGHT = 935;
+        public static final int WIDTH = 515;
     }
 }

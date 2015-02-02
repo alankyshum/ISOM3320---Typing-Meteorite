@@ -3,7 +3,6 @@ package meteorite;
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -15,30 +14,28 @@ public class Word {
     // ATTRIBUTES
     public Pos_info pos;
     public Wrapper_info wrapper;
-
+    // ANIMATION
+    public TranslateTransition drop_tt;
     private double drop_speed;
     private double drop_duration;
     private String content;
     private int attack_pt;
-
     // GLOBAL VARIABLES ACROSS CLASSES
     private FlowPane that_word;
-
-    // ANIMATION
-    public TranslateTransition drop_tt;
 
     public Word(Pos_info pos, double level, String content) {
         this.pos = pos;
         this.drop_duration = Math.max(Main.DROP_DUR_BASE - this.drop_speed, 300);
-        this.drop_speed = Main.SCREEN.HEIGHT/this.drop_duration;
+        this.drop_speed = Main.SCREEN.HEIGHT / this.drop_duration;
         this.content = content;
         this.attack_pt = content.length();
         that_word = new FlowPane();
         that_word.setLayoutX(this.pos.x);
         that_word.setLayoutY(this.pos.y);
 
-        double height = 0; double width = 0;
-        for (char ch: content.toCharArray()) {
+        double height = 0;
+        double width = 0;
+        for (char ch : content.toCharArray()) {
             Text tmp = new Text(0, 0, Character.toString(ch));
             tmp.getStyleClass().add("default_text");
             that_word.getChildren().add(tmp);
@@ -62,7 +59,8 @@ public class Word {
             GameSystem.currPlayer.checkLv();
         }
         if (!(this instanceof BossWord))
-            drop_tt.setOnFinished(e-> {});
+            drop_tt.setOnFinished(e -> {
+            });
         PlayController.word_layer_static.getChildren().remove(that_word);
         GameSystem.WORD_OBJ_LIST.remove(this);
     }
@@ -71,14 +69,14 @@ public class Word {
     public void typed_letter(int pos, boolean typed) {
         if (typed) {
             if (pos == -1) {
-                that_word.getChildren().forEach(t-> {
+                that_word.getChildren().forEach(t -> {
                     t.getStyleClass().add("typed_text");
                 });
             } else {
                 that_word.getChildren().get(pos).getStyleClass().add("typed_text");
             }
         } else {
-            that_word.getChildren().forEach(t-> {
+            that_word.getChildren().forEach(t -> {
                 t.getStyleClass().remove("typed_text");
             });
         }
@@ -96,7 +94,11 @@ public class Word {
         drop_tt.play();
     }
 
-    public String get_content() { return this.content; }
+    public String get_content() {
+        return this.content;
+    }
 
-    public FlowPane get_word_obj() { return this.that_word; }
+    public FlowPane get_word_obj() {
+        return this.that_word;
+    }
 }
