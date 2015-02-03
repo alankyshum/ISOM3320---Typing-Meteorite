@@ -4,6 +4,7 @@
 
 .section_header {
     font-weight: bold;
+    margin-top: 1em;
 }
 .section_header:before {
   content: "# ";
@@ -16,4 +17,25 @@ h2 {
     font-size: 1.6em;
     text-align: right;
     border-bottom: 1px dashed #ccc;
+}
+
+
+img.thumbnail {
+  display: inline-block;
+}
+span.badge {
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #ddd;
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+
+.embed-responsive {
+  text-align: center;
 }
