@@ -65,9 +65,7 @@ public class Driver {
                 sceneFile = new FXMLLoader(getClass().getResource("scene/GamingScreen.fxml"));
                 root = sceneFile.load();
                 scene = new Scene(root, Main.SCREEN.WIDTH, Main.SCREEN.HEIGHT);
-                scene.setOnKeyPressed(e -> {
-                    GameSystem.handle_key_press(e.getText().toUpperCase());
-                });
+                scene.setOnKeyPressed(e-> GameSystem.handle_key_press(e));
                 break;
             case "ranking":
                 sceneFile = new FXMLLoader(getClass().getResource("scene/BoardScreen.fxml"));

@@ -3,6 +3,8 @@ package meteorite;
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.effect.GaussianBlur;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -28,58 +30,58 @@ public class GameSystem {
     private static boolean wordMatched = false;
     private static boolean bossMatched = false;
     private static boolean partialMatched = false;
+    private static boolean gameStopped = false;
 
-    public static void handle_key_press(String key) {
-        if (key.isEmpty()) return;
-//        System.out.printf("Size of all %s", WORD_OBJ_LIST.size());
-        if (match_word_obj_list.isEmpty()) {
-            match_word_obj_list = (ArrayList<Word>) (WORD_OBJ_LIST.clone());
-//            WORD_OBJ_LIST.forEach(match_word_obj_list::add);
-            match_word_obj_list_del = new ArrayList<>();
-            wordMatched = false;
-            bossMatched = false;
-            partialMatched = false;
-            match_til_pos = 0;
-        }
-        // track all matched + visible words
-        match_word_obj_list.forEach(w -> {
-            if (w.get_content().startsWith(key, match_til_pos) &&
-                    WORD_OBJ_LIST.contains(w)) {
-                partialMatched = true;
-                w.typed_letter(match_til_pos, true);
-                if (match_til_pos == w.get_content().length() - 1) {
-                    wordMatched = true;
-                    WORD_OBJ_LIST.remove(w); // remove to retain style
-                    if (w instanceof BossWord) {
-                        bossMatched = true;
+    public static void handle_key_press(KeyEvent KE) {
+        String key = KE.getText().toUpperCase();
+        if (!key.isEmpty()) {
+            if (match_word_obj_list.isEmpty()) {
+                match_word_obj_list = (ArrayList<Word>) (WORD_OBJ_LIST.clone());
+                match_word_obj_list_del = new ArrayList<>();
+                wordMatched = false;
+                bossMatched = false;
+                partialMatched = false;
+                match_til_pos = 0;
+            }
+            // track all matched + visible words
+            match_word_obj_list.forEach(w -> {
+                if (w.get_content().startsWith(key, match_til_pos) &&
+                        WORD_OBJ_LIST.contains(w)) {
+                    partialMatched = true;
+                    w.typed_letter(match_til_pos, true);
+                    if (match_til_pos == w.get_content().length() - 1) {
+                        wordMatched = true;
+                        WORD_OBJ_LIST.remove(w); // remove to retain style
+                        if (w instanceof BossWord) {
+                            bossMatched = true;
+                        }
+                        Castle.shootWord(w);
+                        // break loop here if: only destroy 1 of all same words
                     }
-                    Castle.shootWord(w);
-                    // break loop here if: only destroy 1 of all same words
+                } else {
+                    match_word_obj_list_del.add(w);
+                    w.typed_letter(0, false);
                 }
+            });
+            // some words matched
+            if (partialMatched) match_til_pos++;
+            // found target word to destroy
+            if (wordMatched) {
+                if (bossMatched) {
+                    WORD_OBJ_LIST.forEach(all_w -> {
+                        all_w.typed_letter(-1, true);
+                        Castle.shootWord(all_w);
+                    });
+                } else {
+                    WORD_OBJ_LIST.forEach(all_w -> {
+                        all_w.typed_letter(0, false);
+                    });
+                }
+                match_word_obj_list.clear();
             } else {
-                match_word_obj_list_del.add(w);
-                w.typed_letter(0, false);
+                match_word_obj_list_del.forEach(match_word_obj_list::remove);
             }
-        });
-        // some words matched
-        if (partialMatched) match_til_pos++;
-        // found target word to destroy
-        if (wordMatched) {
-            if (bossMatched) {
-                WORD_OBJ_LIST.forEach(all_w -> {
-                    all_w.typed_letter(-1, true);
-                    Castle.shootWord(all_w);
-                });
-            } else {
-                WORD_OBJ_LIST.forEach(all_w -> {
-                    all_w.typed_letter(0, false);
-                });
-            }
-            match_word_obj_list.clear();
-        } else {
-            match_word_obj_list_del.forEach(match_word_obj_list::remove);
         }
-//        System.out.printf("\tSize of matched %s\n", match_word_obj_list.size());
     }
 
     public static void create_player() {
@@ -100,7 +102,7 @@ public class GameSystem {
             writeList.add(0, player);
         }
 
-        java.io.File file = new java.io.File("player.txt");
+        java.io.File file = new java.io.File(Main.class.getResource("data/player.txt").getFile());
         java.io.PrintWriter output = new java.io.PrintWriter(file);
         int cnt = 3;
         for (Player p : writeList) {
@@ -113,7 +115,7 @@ public class GameSystem {
     }
 
     public static void load_to_player_list() throws IOException {
-        FileReader fr = new FileReader("player.txt");
+        FileReader fr = new FileReader(Main.class.getResource("data/player.txt").getFile());
         BufferedReader br = new BufferedReader(fr);
         String[] linex;
         String line;
@@ -125,7 +127,7 @@ public class GameSystem {
     }
 
     public static void load_to_word_list(int lv) throws IOException {
-        FileReader fr = new FileReader("word.txt");
+        FileReader fr = new FileReader(Main.class.getResource("data/word.txt").getFile());
         BufferedReader br = new BufferedReader(fr);
         String[] linex;
         int curr_lv = 1;
@@ -144,7 +146,7 @@ public class GameSystem {
     }
 
     public static void load_to_boss_list() throws IOException {
-        FileReader fr = new FileReader("boss.txt");
+        FileReader fr = new FileReader(Main.class.getResource("data/boss.txt").getFile());
         BufferedReader br = new BufferedReader(fr);
         String line;
         boss_list.clear();
@@ -185,6 +187,8 @@ public class GameSystem {
     public static void game_end() {
         if (!gameOver) {
             PlayController.playerName_static.setDisable(false);
+            PlayController.homeBtn_static.setDisable(false);
+            PlayController.saveBtn_static.setDisable(false);
             SoundSystem.BGM.stop();
             System.out.println("GAME OVER");
 
@@ -213,6 +217,37 @@ public class GameSystem {
             panelTT.setByY(-Main.SCREEN.HEIGHT / 2 - 100);
             panelTT.play();
             gameOver = true;
+        }
+    }
+
+    public static void gamePause() {
+        if (gameStopped) {
+            PlayController.stopBtn_static.setText("||");
+            PlayController.genWordTimer_static.play();
+            GameSystem.WORD_OBJ_LIST.forEach(w -> {
+                if (w instanceof BossWord) {
+                    ((BossWord)w).drop_tt.play();
+                } else {
+                    w.drop_tt.play();
+                }
+                w.get_word_obj().setEffect(new GaussianBlur(0));
+            });
+            gameStopped = false;
+            Main.STAGE.getScene().setOnKeyPressed(e -> GameSystem.handle_key_press(e));
+        } else {
+            PlayController.genWordTimer_static.pause();
+            GameSystem.WORD_OBJ_LIST.forEach(w -> {
+                if (w instanceof BossWord) {
+                    ((BossWord) w).drop_tt.pause();
+                } else {
+                    w.drop_tt.pause();
+                }
+                w.get_word_obj().setEffect(new GaussianBlur(7));
+            });
+            PlayController.stopBtn_static.setText("|>");
+            gameStopped = true;
+            Main.STAGE.getScene().setOnKeyPressed(e -> {
+            });
         }
     }
 

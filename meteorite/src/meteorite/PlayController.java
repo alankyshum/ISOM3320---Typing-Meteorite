@@ -33,25 +33,17 @@ public class PlayController {
     public static Text scoreText_final_static;
     public static Text levelText_final_static;
     public static TextField playerName_static;
-    @FXML
+    public static Button saveBtn_static;
+    public static Button homeBtn_static;
     public static ImageView outerTree1_static;
-    @FXML
     public static ImageView outerTree2_static;
-    @FXML
     public static ImageView outerTree3_static;
-    @FXML
     public static ImageView outerTree4_static;
-    @FXML
     public static ImageView innerTree1_static;
-    @FXML
     public static ImageView innerTree2_static;
-    @FXML
     public static ImageView sphinx_static;
-    @FXML
     public static ImageView eiffelTower_static;
-    @FXML
     public static ImageView castleImg_static;
-    private static boolean gameStopped = false;
     /* ================ */
     /* TRACKERS ======= */
     /* ================ */
@@ -79,6 +71,8 @@ public class PlayController {
     private Button stopBtn;
     @FXML
     private Button saveBtn;
+    @FXML
+    private Button homeBtn;
     @FXML
     private VBox endGamePanel;
     @FXML
@@ -119,8 +113,10 @@ public class PlayController {
         scoreText_final_static = scoreText_final;
         levelText_final_static = levelText_final;
         playerName_static = playerName;
-        endGamePanel_static = endGamePanel;
         stopBtn_static = stopBtn;
+        homeBtn_static = homeBtn;
+        saveBtn_static = saveBtn;
+        endGamePanel_static = endGamePanel;
         msg_static = msg;
         hp_bar.widthProperty().bind(Castle.hp_bind);
 
@@ -185,32 +181,7 @@ public class PlayController {
 
     @FXML
     public void pauseGame() {
-        if (gameStopped) {
-            stopBtn.setText("||");
-            genWordTimer.play();
-            GameSystem.WORD_OBJ_LIST.forEach(w -> {
-                w.drop_tt.play();
-                w.get_word_obj().setEffect(new GaussianBlur(0));
-            });
-            gameStopped = false;
-            Main.STAGE.getScene().setOnKeyPressed(e -> {
-                GameSystem.handle_key_press(e.getText().toUpperCase());
-            });
-        } else {
-            genWordTimer.pause();
-            GameSystem.WORD_OBJ_LIST.forEach(w -> {
-                if (w instanceof BossWord) {
-                    ((BossWord) w).drop_tt.pause();
-                } else {
-                    w.drop_tt.pause();
-                }
-                w.get_word_obj().setEffect(new GaussianBlur(7));
-            });
-            stopBtn.setText("|>");
-            gameStopped = true;
-            Main.STAGE.getScene().setOnKeyPressed(e -> {
-            });
-        }
+        GameSystem.gamePause();
     }
 
     @FXML

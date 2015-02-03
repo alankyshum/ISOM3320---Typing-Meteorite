@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaFXApp" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/meteorite/GameSystem.java" line="87" />
-    <bookmark url="file://$PROJECT_DIR$/src/meteorite/GameSystem.java" line="145" />
+    <bookmark url="file://$PROJECT_DIR$/src/meteorite/GameSystem.java" line="89" />
+    <bookmark url="file://$PROJECT_DIR$/src/meteorite/GameSystem.java" line="147" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/BossWord.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/BossWord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Castle.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Castle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Driver.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Driver.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/meteorite/data/player.txt" />
+      <change type="DELETED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\player.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/music/BGM.wav" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/music/BGM.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/music/BGM.wav" afterPath="$PROJECT_DIR$/src/meteorite/music/BGM.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/GameSystem.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/GameSystem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main$SCREEN.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main$SCREEN.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/PlayController.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/PlayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Player.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Word.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Word.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/BoardScreen.fxml" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/BoardScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/scene/BoardScreen.fxml" afterPath="$PROJECT_DIR$/src/meteorite/scene/BoardScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/BossWord.java" afterPath="$PROJECT_DIR$/src/meteorite/BossWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Castle.java" afterPath="$PROJECT_DIR$/src/meteorite/Castle.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Driver.java" afterPath="$PROJECT_DIR$/src/meteorite/Driver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/GameSystem.java" afterPath="$PROJECT_DIR$/src/meteorite/GameSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/GamingScreen.fxml" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/GamingScreen.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml" afterPath="$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Main.java" afterPath="$PROJECT_DIR$/src/meteorite/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/PlayController.java" afterPath="$PROJECT_DIR$/src/meteorite/PlayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Player.java" afterPath="$PROJECT_DIR$/src/meteorite/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/StartScreen.fxml" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/StartScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/scene/StartScreen.fxml" afterPath="$PROJECT_DIR$/src/meteorite/scene/StartScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Word.java" afterPath="$PROJECT_DIR$/src/meteorite/Word.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\boss.txt" afterPath="$PROJECT_DIR$/src/meteorite/data/boss.txt" />
+      <change type="MOVED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\word.txt" afterPath="$PROJECT_DIR$/src/meteorite/data/word.txt" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,11 +88,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/Word.java">
+      <file leaf-file-name="GameSystem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/meteorite/GameSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1632">
-              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.4318182" vertical-offset="144" max-vertical-offset="4128">
+              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Driver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/meteorite/Driver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="526" max-vertical-offset="4368">
+              <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -106,59 +111,14 @@
       <file leaf-file-name="PlayController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/meteorite/PlayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3168" max-vertical-offset="3968">
-              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5936556" vertical-offset="39" max-vertical-offset="896">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="688">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="word.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/word.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="224">
-              <caret line="8" column="2667" selection-start-line="8" selection-start-column="2667" selection-end-line="8" selection-end-column="2667" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BossWord.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/BossWord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="640">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Castle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/Castle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2112" max-vertical-offset="2880">
-              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2467" max-vertical-offset="3568">
+              <caret line="183" column="8" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
+              <folding>
+                <element signature="e#5692#5693#0" expanded="true" />
+                <element signature="e#5730#5731#0" expanded="true" />
+                <element signature="e#5769#5770#0" expanded="true" />
+                <element signature="e#5806#5807#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,18 +129,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="3968">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/GameSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="3408">
-              <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
+            <state vertical-scroll-proportion="-2.892857" vertical-offset="2765" max-vertical-offset="3712">
+              <caret line="188" column="147" selection-start-line="188" selection-start-column="147" selection-end-line="188" selection-end-column="147" />
               <folding />
             </state>
           </provider>
@@ -217,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/meteorite/scene/RatingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/meteorite/scene/BoardScreen.fxml" />
         <option value="$PROJECT_DIR$/player.txt" />
-        <option value="$PROJECT_DIR$/src/meteorite/Driver.java" />
         <option value="$PROJECT_DIR$/src/meteorite/Word.java" />
         <option value="$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/meteorite/Main.java" />
@@ -226,8 +175,9 @@
         <option value="$PROJECT_DIR$/src/meteorite/BossWord.java" />
         <option value="$PROJECT_DIR$/boss.txt" />
         <option value="$PROJECT_DIR$/word.txt" />
-        <option value="$PROJECT_DIR$/src/meteorite/GameSystem.java" />
+        <option value="$PROJECT_DIR$/src/meteorite/Driver.java" />
         <option value="$PROJECT_DIR$/src/meteorite/PlayController.java" />
+        <option value="$PROJECT_DIR$/src/meteorite/GameSystem.java" />
       </list>
     </option>
   </component>
@@ -236,10 +186,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="y" value="44" />
-    <option name="width" value="986" />
-    <option name="height" value="990" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -285,7 +234,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -336,9 +285,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteorite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteorite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteorite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scene" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteorite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteorite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,15 +341,16 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/meteorite/data" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="LayoutCode.rearrangeEntries" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\data" />
       <recent name="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\scene" />
       <recent name="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\music" />
       <recent name="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\img" />
@@ -599,23 +585,24 @@
     <option name="totallyTimeSpent" value="13877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="44" width="986" height="990" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22916667" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20570265" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32790223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22033899" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2413442" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20206186" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2045929" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26272914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22007722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -631,7 +618,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26354167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -661,14 +647,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/meteorite/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1136">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/meteorite/Pos_info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="400">
@@ -688,7 +666,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -719,7 +702,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="615">
           <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -750,7 +738,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +767,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="880">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,7 +796,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -814,7 +817,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -830,7 +838,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="160">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -918,7 +931,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player.txt">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/data/player.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06916427" vertical-offset="0" max-vertical-offset="694">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -943,36 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62916666" vertical-offset="1483" max-vertical-offset="4304">
-          <caret line="121" column="45" selection-start-line="121" selection-start-column="45" selection-end-line="121" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/javafx-src.zip!/javafx/geometry/Bounds.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="512" max-vertical-offset="3872">
           <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="3968">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="752">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,14 +987,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boss.txt">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/data/boss.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="368">
           <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word.txt">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/data/word.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1568">
           <caret line="8" column="2667" selection-start-line="8" selection-start-column="2667" selection-end-line="8" selection-end-column="2667" />
@@ -1015,26 +1002,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/GameSystem.java">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="3408">
-          <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="896">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="752">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.892857" vertical-offset="2765" max-vertical-offset="3712">
+          <caret line="188" column="147" selection-start-line="188" selection-start-column="147" selection-end-line="188" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/javafx-src.zip!/javafx/scene/input/KeyEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="609" max-vertical-offset="6592">
+          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="526" max-vertical-offset="4368">
+          <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/meteorite/PlayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1104" max-vertical-offset="4000">
-          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2467" max-vertical-offset="3568">
+          <caret line="183" column="8" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
+          <folding>
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5806#5807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/GameSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5936556" vertical-offset="39" max-vertical-offset="896">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.4318182" vertical-offset="144" max-vertical-offset="4128">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1098,7 +1125,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
