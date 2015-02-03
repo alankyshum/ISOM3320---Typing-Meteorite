@@ -6,6 +6,7 @@ import javafx.scene.media.AudioClip;
 public class SoundSystem {
 
     public static AudioClip BGM;
+    public static AudioClip BGM_Start;
     public static AudioClip wordExplode;
     public static AudioClip buttonSoundEffect;
     public static AudioClip castleExplosion;
@@ -16,6 +17,10 @@ public class SoundSystem {
         BGM = new AudioClip(Main.class.getResource("music/BGM.wav").toString());
         BGM.setCycleCount(Timeline.INDEFINITE);
         BGM.setVolume(0.8);
+
+        BGM_Start = new AudioClip(Main.class.getResource("music/BGM_Start.wav").toString());
+        BGM_Start.setCycleCount(Timeline.INDEFINITE);
+        BGM_Start.setVolume(0.5);
 
         wordExplode = new AudioClip(Main.class.getResource("music/damage.wav").toString());
         wordExplode.setCycleCount(1);

@@ -93,6 +93,7 @@ public class Driver {
 
     @FXML
     public void initialize() {
+
         // reposition logo
         logo_text.setTranslateX(Main.SCREEN.WIDTH);
         logo_meteor.setTranslateX(-Main.SCREEN.WIDTH);
@@ -117,6 +118,7 @@ public class Driver {
 
         // Initialise Sounds + Fonts
         SoundSystem.initSounds();
+        SoundSystem.BGM_Start.play();
         Font.loadFont(Main.class.getResource("fonts/GOTHICB.TTF").toExternalForm(), 12);
         Font.loadFont(Main.class.getResource("fonts/Blitzwing.ttf").toExternalForm(), 12);
         Font.loadFont(Main.class.getResource("fonts/Coburn.otf").toExternalForm(), 12);
@@ -152,6 +154,7 @@ public class Driver {
                 System.out.println(io_e);
             }
             // load BGM
+            SoundSystem.BGM_Start.stop();
             SoundSystem.BGM.play();
         });
 
@@ -250,9 +253,11 @@ public class Driver {
     public void mute_BGM() {
         if (muted) {
             SoundSystem.BGM.setVolume(1);
+            SoundSystem.BGM_Start.setVolume(1);
             muted = false;
         } else {
             SoundSystem.BGM.setVolume(0);
+            SoundSystem.BGM_Start.setVolume(0);
             muted = true;
         }
     }
