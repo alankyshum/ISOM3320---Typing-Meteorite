@@ -146,6 +146,7 @@ public class PlayController {
 
         // Load Words + Generate Words
         try {
+            GameSystem.word_list.clear();
             GameSystem.load_to_word_list(GameSystem.currPlayer.get_lv());
         } catch (IOException e) {
             System.out.println(e);
