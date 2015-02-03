@@ -10,7 +10,7 @@ public class Main extends Application {
 
     // CONSTANTS
     public final static int DROP_DUR_BASE = 10000; // Word Drop duration base
-    public static final int LV_UP_THRESHOLD = 20;
+    public static final int LV_UP_THRESHOLD = 20; // words to type to finish the level
     public static final double GEN_WORD_INTERVAL = 1.5; // Time interval to generate words
     public static final double FADEOUTTIME = 1.5; // Time to fadeout destroyed item
     public static Stage STAGE;

@@ -117,8 +117,11 @@ public class Driver {
         fadeOut.play();
 
         // Initialise Sounds + Fonts
-        SoundSystem.initSounds();
-        SoundSystem.BGM_Start.play();
+        if (SoundSystem.BGM_Start == null)
+            SoundSystem.initSounds();
+        if (!SoundSystem.BGM_Start.isPlaying() && !muted)
+            SoundSystem.BGM_Start.play();
+        muteBtn.setSelected(muted);
         Font.loadFont(Main.class.getResource("fonts/GOTHICB.TTF").toExternalForm(), 12);
         Font.loadFont(Main.class.getResource("fonts/Blitzwing.ttf").toExternalForm(), 12);
         Font.loadFont(Main.class.getResource("fonts/Coburn.otf").toExternalForm(), 12);
@@ -253,11 +256,11 @@ public class Driver {
     public void mute_BGM() {
         if (muted) {
             SoundSystem.BGM.setVolume(1);
-            SoundSystem.BGM_Start.setVolume(1);
+            SoundSystem.BGM_Start.play(1);
             muted = false;
         } else {
             SoundSystem.BGM.setVolume(0);
-            SoundSystem.BGM_Start.setVolume(0);
+            SoundSystem.BGM_Start.stop();
             muted = true;
         }
     }

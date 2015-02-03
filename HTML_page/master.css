@@ -1,0 +1,19 @@
+.{
+    color: #545454;
+}
+
+.section_header {
+    font-weight: bold;
+}
+.section_header:before {
+  content: "# ";
+}
+
+h1 {
+    font-size: 2.3em;
+}
+h2 {
+    font-size: 1.6em;
+    text-align: right;
+    border-bottom: 1px dashed #ccc;
+}
