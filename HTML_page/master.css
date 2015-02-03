@@ -21,6 +21,15 @@ h2 {
   text-align: right;
   border-bottom: 1px dashed #ccc;
 }
+h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: #888;
+}
+h3:before {
+    content: "// "
+}
 
 
 img.thumbnail {
