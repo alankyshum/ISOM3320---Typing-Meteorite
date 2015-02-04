@@ -11,46 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UML Class Diagram.suml" />
-      <change type="DELETED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\out\production\meteorite\meteorite\data\boss.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\out\production\meteorite\meteorite\data\player.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\out\production\meteorite\meteorite\data\word.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/BossWord.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/BossWord.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Castle.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Castle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Driver.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Driver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/GameSystem.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/GameSystem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main$SCREEN.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main$SCREEN.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/PlayController.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/PlayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Player.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Pos_info.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Pos_info.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/SoundSystem.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/SoundSystem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HTML_page/UMLDiagram.jpg" afterPath="$PROJECT_DIR$/../HTML_page/UMLDiagram.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Word.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Word.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/Wrapper_info.class" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/Wrapper_info.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/BoardScreen.fxml" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/BoardScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/scene/BoardScreen.fxml" afterPath="$PROJECT_DIR$/src/meteorite/scene/BoardScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/BossWord.java" afterPath="$PROJECT_DIR$/src/meteorite/BossWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Castle.java" afterPath="$PROJECT_DIR$/src/meteorite/Castle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Driver.java" afterPath="$PROJECT_DIR$/src/meteorite/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/GameSystem.java" afterPath="$PROJECT_DIR$/src/meteorite/GameSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/GamingScreen.fxml" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/GamingScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml" afterPath="$PROJECT_DIR$/src/meteorite/scene/GamingScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Main.java" afterPath="$PROJECT_DIR$/src/meteorite/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/PlayController.java" afterPath="$PROJECT_DIR$/src/meteorite/PlayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Player.java" afterPath="$PROJECT_DIR$/src/meteorite/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Pos_info.java" afterPath="$PROJECT_DIR$/src/meteorite/Pos_info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/SoundSystem.java" afterPath="$PROJECT_DIR$/src/meteorite/SoundSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/StartScreen.fxml" afterPath="$PROJECT_DIR$/out/production/meteorite/meteorite/scene/StartScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/scene/StartScreen.fxml" afterPath="$PROJECT_DIR$/src/meteorite/scene/StartScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Word.java" afterPath="$PROJECT_DIR$/src/meteorite/Word.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/meteorite/Wrapper_info.java" afterPath="$PROJECT_DIR$/src/meteorite/Wrapper_info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../classDiagram.suml" afterPath="$PROJECT_DIR$/../classDiagram.suml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../HTML_page/index.html" afterPath="$PROJECT_DIR$/../HTML_page/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\data\boss.txt" afterPath="$PROJECT_DIR$/db/boss.txt" />
-      <change type="MOVED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\data\player.txt" afterPath="$PROJECT_DIR$/db/player.txt" />
-      <change type="MOVED" beforePath="E:\Documents\GitHub\isom3320-gamedev\meteorite\src\meteorite\data\word.txt" afterPath="$PROJECT_DIR$/db/word.txt" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +42,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties converted="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -111,6 +76,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -122,19 +88,138 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/meteorite/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="825">
               <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Word.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/meteorite/Word.java">
+      <file leaf-file-name="BossWord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/meteorite/BossWord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4610951" vertical-offset="96" max-vertical-offset="1520">
-              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="660">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Castle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/meteorite/Castle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2475">
+              <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/meteorite" pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/meteorite">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>meteorite</OriginalElement>
+              <nodes>
+                <node x="1605.5" y="1256.5">meteorite.Castle</node>
+                <node x="364.0" y="1301.0">meteorite.Pos_info</node>
+                <node x="340.0" y="2865.5">meteorite.fonts</node>
+                <node x="902.5" y="1551.5">meteorite.BossWord</node>
+                <node x="2960.5" y="-23.0">meteorite.Main</node>
+                <node x="324.0" y="1507.0">meteorite.Player</node>
+                <node x="943.0" y="2865.5">meteorite.data</node>
+                <node x="1106.0" y="2865.5">meteorite.css</node>
+                <node x="1193.5" y="2423.0">meteorite.Word</node>
+                <node x="1078.5" y="-38.0">meteorite.PlayController</node>
+                <node x="3049.5" y="243.5">meteorite.Main.SCREEN</node>
+                <node x="538.5" y="2865.5">meteorite.scene</node>
+                <node x="-22.5" y="2857.0">meteorite.SoundSystem</node>
+                <node x="2445.0" y="347.0">meteorite.Driver</node>
+                <node x="737.5" y="2865.5">meteorite.music</node>
+                <node x="105.0" y="1812.0">meteorite.GameSystem</node>
+                <node x="1630.5" y="2501.0">meteorite.Wrapper_info</node>
+                <node x="1264.5" y="2865.5">meteorite.img</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="meteorite.BossWord" target="meteorite.Word">
+                  <point x="97.5" y="0.0" />
+                  <point x="1320.0" y="1600.0" />
+                  <point x="-40.0" y="-137.0" />
+                </edge>
+                <edge source="meteorite.GameSystem" target="meteorite.Player">
+                  <point x="-335.0" y="-40.0" />
+                  <point x="40.0" y="2040.0" />
+                  <point x="40.0" y="1600.0" />
+                  <point x="-116.0" y="0.0" />
+                </edge>
+                <edge source="meteorite.PlayController" target="meteorite.Castle">
+                  <point x="0.0" y="598.0" />
+                  <point x="0.0" y="-103.5" />
+                </edge>
+                <edge source="meteorite.PlayController" target="meteorite.Driver">
+                  <point x="641.5" y="0.0" />
+                  <point x="-235.0" y="0.0" />
+                </edge>
+                <edge source="meteorite.Castle" target="meteorite.Pos_info">
+                  <point x="-40.0" y="-103.5" />
+                  <point x="1680.0" y="1200.0" />
+                  <point x="440.0" y="1200.0" />
+                  <point x="0.0" y="-59.0" />
+                </edge>
+                <edge source="meteorite.Player" target="meteorite.BossWord">
+                  <point x="116.0" y="0.0" />
+                  <point x="-97.5" y="0.0" />
+                </edge>
+                <edge source="meteorite.Castle" target="meteorite.Wrapper_info">
+                  <point x="0.0" y="103.5" />
+                  <point x="0.0" y="-59.0" />
+                </edge>
+                <edge source="meteorite.Main.SCREEN" target="meteorite.Main">
+                  <point x="0.0" y="-36.5" />
+                  <point x="0.0" y="103.0" />
+                </edge>
+                <edge source="meteorite.Word" target="meteorite.Pos_info">
+                  <point x="0.0" y="-137.0" />
+                  <point x="1360.0" y="1400.0" />
+                  <point x="76.0" y="40.0" />
+                </edge>
+                <edge source="meteorite.GameSystem" target="meteorite.Word">
+                  <point x="335.0" y="0.0" />
+                  <point x="1280.0" y="2080.0" />
+                  <point x="-80.0" y="-137.0" />
+                </edge>
+                <edge source="meteorite.GameSystem" target="meteorite.Pos_info">
+                  <point x="-335.0" y="0.0" />
+                  <point x="0.0" y="2080.0" />
+                  <point x="0.0" y="1360.0" />
+                  <point x="-76.0" y="0.0" />
+                </edge>
+                <edge source="meteorite.Player" target="meteorite.Pos_info">
+                  <point x="0.0" y="-93.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="meteorite.Word" target="meteorite.Wrapper_info">
+                  <point x="166.5" y="0.0" />
+                  <point x="-89.5" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.6" x="950.3333333333335" y="1839.1666666666667" />
+              <SelectedNodes>
+                <node>meteorite.Castle</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Inner Classes</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Constructors</Category>
+                <Category>Fields</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -194,10 +279,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="82" />
-    <option name="y" value="20" />
-    <option name="width" value="1043" />
-    <option name="height" value="1042" />
+    <option name="x" value="1607" />
+    <option name="y" value="1103" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -243,7 +328,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,6 +388,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -325,7 +410,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/meteorite.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="LayoutCode.rearrangeEntries" value="true" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
@@ -352,90 +437,14 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
+      <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -444,22 +453,18 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -490,6 +495,153 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -503,6 +655,26 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application">
@@ -569,48 +741,50 @@
       <workItem from="1422460599504" duration="534000" />
       <workItem from="1422461235443" duration="3595000" />
       <workItem from="1422465760660" duration="7753000" />
+      <workItem from="1423054213680" duration="537000" />
+      <workItem from="1423055513914" duration="608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13877000" />
+    <option name="totallyTimeSpent" value="15022000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="82" y="20" width="1043" height="1042" extended-state="0" />
+    <frame x="1607" y="1103" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40325865" sideWeight="0.33224043" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20518358" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18826666" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739422" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36499467" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22945571" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22505091" sideWeight="0.66775954" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2614728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22007722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Sequence" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739422" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22007722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18826666" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14739583" sideWeight="0.66775954" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40325865" sideWeight="0.33224043" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Sequence" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22865854" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2614728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20518358" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36499467" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -640,6 +814,40 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/BossWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="660">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Castle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2475">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="825">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/meteorite/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="390">
@@ -855,34 +1063,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="18688" max-vertical-offset="22336">
-          <caret line="1248" column="0" selection-start-line="1248" selection-start-column="0" selection-end-line="1248" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/javafx-src.zip!/javafx/geometry/Bounds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="512" max-vertical-offset="3872">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/javafx-src.zip!/javafx/scene/input/KeyEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="609" max-vertical-offset="6592">
-          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/meteorite/SoundSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="768">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,7 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="368">
           <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14656489" vertical-offset="0" max-vertical-offset="655">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,22 +1111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/BossWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="768">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/Castle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="3008">
-          <caret line="65" column="127" selection-start-line="65" selection-start-column="127" selection-end-line="65" selection-end-column="127" />
           <folding />
         </state>
       </provider>
@@ -1006,6 +1172,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.862069" vertical-offset="144" max-vertical-offset="4352">
           <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1425">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1018,11 +1191,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/meteorite/Word.java">
+    <entry file="file://$PROJECT_DIR$/src/meteorite/BossWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4610951" vertical-offset="96" max-vertical-offset="1520">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/meteorite/Castle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2475">
+          <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/meteorite">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>meteorite</OriginalElement>
+          <nodes>
+            <node x="1605.5" y="1256.5">meteorite.Castle</node>
+            <node x="364.0" y="1301.0">meteorite.Pos_info</node>
+            <node x="340.0" y="2865.5">meteorite.fonts</node>
+            <node x="902.5" y="1551.5">meteorite.BossWord</node>
+            <node x="2960.5" y="-23.0">meteorite.Main</node>
+            <node x="324.0" y="1507.0">meteorite.Player</node>
+            <node x="943.0" y="2865.5">meteorite.data</node>
+            <node x="1106.0" y="2865.5">meteorite.css</node>
+            <node x="1193.5" y="2423.0">meteorite.Word</node>
+            <node x="1078.5" y="-38.0">meteorite.PlayController</node>
+            <node x="3049.5" y="243.5">meteorite.Main.SCREEN</node>
+            <node x="538.5" y="2865.5">meteorite.scene</node>
+            <node x="-22.5" y="2857.0">meteorite.SoundSystem</node>
+            <node x="2445.0" y="347.0">meteorite.Driver</node>
+            <node x="737.5" y="2865.5">meteorite.music</node>
+            <node x="105.0" y="1812.0">meteorite.GameSystem</node>
+            <node x="1630.5" y="2501.0">meteorite.Wrapper_info</node>
+            <node x="1264.5" y="2865.5">meteorite.img</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="meteorite.BossWord" target="meteorite.Word">
+              <point x="97.5" y="0.0" />
+              <point x="1320.0" y="1600.0" />
+              <point x="-40.0" y="-137.0" />
+            </edge>
+            <edge source="meteorite.GameSystem" target="meteorite.Player">
+              <point x="-335.0" y="-40.0" />
+              <point x="40.0" y="2040.0" />
+              <point x="40.0" y="1600.0" />
+              <point x="-116.0" y="0.0" />
+            </edge>
+            <edge source="meteorite.PlayController" target="meteorite.Castle">
+              <point x="0.0" y="598.0" />
+              <point x="0.0" y="-103.5" />
+            </edge>
+            <edge source="meteorite.PlayController" target="meteorite.Driver">
+              <point x="641.5" y="0.0" />
+              <point x="-235.0" y="0.0" />
+            </edge>
+            <edge source="meteorite.Castle" target="meteorite.Pos_info">
+              <point x="-40.0" y="-103.5" />
+              <point x="1680.0" y="1200.0" />
+              <point x="440.0" y="1200.0" />
+              <point x="0.0" y="-59.0" />
+            </edge>
+            <edge source="meteorite.Player" target="meteorite.BossWord">
+              <point x="116.0" y="0.0" />
+              <point x="-97.5" y="0.0" />
+            </edge>
+            <edge source="meteorite.Castle" target="meteorite.Wrapper_info">
+              <point x="0.0" y="103.5" />
+              <point x="0.0" y="-59.0" />
+            </edge>
+            <edge source="meteorite.Main.SCREEN" target="meteorite.Main">
+              <point x="0.0" y="-36.5" />
+              <point x="0.0" y="103.0" />
+            </edge>
+            <edge source="meteorite.Word" target="meteorite.Pos_info">
+              <point x="0.0" y="-137.0" />
+              <point x="1360.0" y="1400.0" />
+              <point x="76.0" y="40.0" />
+            </edge>
+            <edge source="meteorite.GameSystem" target="meteorite.Word">
+              <point x="335.0" y="0.0" />
+              <point x="1280.0" y="2080.0" />
+              <point x="-80.0" y="-137.0" />
+            </edge>
+            <edge source="meteorite.GameSystem" target="meteorite.Pos_info">
+              <point x="-335.0" y="0.0" />
+              <point x="0.0" y="2080.0" />
+              <point x="0.0" y="1360.0" />
+              <point x="-76.0" y="0.0" />
+            </edge>
+            <edge source="meteorite.Player" target="meteorite.Pos_info">
+              <point x="0.0" y="-93.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="meteorite.Word" target="meteorite.Wrapper_info">
+              <point x="166.5" y="0.0" />
+              <point x="-89.5" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6" x="950.3333333333335" y="1839.1666666666667" />
+          <SelectedNodes>
+            <node>meteorite.Castle</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Inner Classes</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Constructors</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
