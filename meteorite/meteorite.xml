@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="meteorite" default="all">
+  
+  
+  <property file="meteorite.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/*.rbc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.zip"/>
+    <include name="*.apk"/>
+    <include name="*.war"/>
+    <include name="*.egg"/>
+    <include name="*.ear"/>
+    <include name="*.ane"/>
+    <include name="*.swc"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module meteorite -->
+  
+  <dirname property="module.meteorite.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.meteorite" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.meteorite" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.meteorite" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.meteorite" value="-encoding UTF-8 -source 8 ${compiler.args}"/>
+  
+  <property name="meteorite.output.dir" value="${module.meteorite.basedir}/out/production/meteorite"/>
+  <property name="meteorite.testoutput.dir" value="${module.meteorite.basedir}/out/test/meteorite"/>
+  
+  <path id="meteorite.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="meteorite.module.production.classpath">
+    <path refid="${module.jdk.classpath.meteorite}"/>
+  </path>
+  
+  <path id="meteorite.runtime.production.module.classpath">
+    <pathelement location="${meteorite.output.dir}"/>
+  </path>
+  
+  <path id="meteorite.module.classpath">
+    <path refid="${module.jdk.classpath.meteorite}"/>
+    <pathelement location="${meteorite.output.dir}"/>
+  </path>
+  
+  <path id="meteorite.runtime.module.classpath">
+    <pathelement location="${meteorite.testoutput.dir}"/>
+    <pathelement location="${meteorite.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.meteorite">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.meteorite">
+    <patternset refid="excluded.from.module.meteorite"/>
+  </patternset>
+  
+  <path id="meteorite.module.sourcepath">
+    <dirset dir="${module.meteorite.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.meteorite" depends="compile.module.meteorite.production,compile.module.meteorite.tests" description="Compile module meteorite"/>
+  
+  <target name="compile.module.meteorite.production" description="Compile module meteorite; production classes">
+    <mkdir dir="${meteorite.output.dir}"/>
+    <javac destdir="${meteorite.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.meteorite}/javac">
+      <compilerarg line="${compiler.args.meteorite}"/>
+      <bootclasspath refid="meteorite.module.bootclasspath"/>
+      <classpath refid="meteorite.module.production.classpath"/>
+      <src refid="meteorite.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.meteorite"/>
+    </javac>
+    
+    <copy todir="${meteorite.output.dir}">
+      <fileset dir="${module.meteorite.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.meteorite.tests" depends="compile.module.meteorite.production" description="compile module meteorite; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.meteorite" description="cleanup module">
+    <delete dir="${meteorite.output.dir}"/>
+    <delete dir="${meteorite.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.meteorite, clean.artifact.javafxapp" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.meteorite" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.javafxapp" value="${basedir}/out/artifacts/JavaFXApp"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="artifact.temp.output.JavaFXApp" value="${artifacts.temp.dir}/JavaFXApp.jar"/>
+    <taskdef resource="com/sun/javafx/tools/ant/antlib.xml" uri="javafx:com.sun.javafx.tools.ant" classpath="${jdk.home.1.8}/lib/ant-javafx.jar"/>
+  </target>
+  
+  <target name="clean.artifact.javafxapp" description="clean JavaFXApp artifact output">
+    <delete dir="${artifact.output.javafxapp}"/>
+  </target>
+  
+  <target name="artifact.javafxapp" depends="init.artifacts, compile.module.meteorite" description="Build &#39;JavaFXApp&#39; artifact" xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <mkdir dir="${artifact.output.javafxapp}"/>
+    <ant antfile="" target="null" dir="">
+      <property name="artifact.output.path" value="${artifact.output.javafxapp}"/>
+    </ant>
+    <copy todir="${artifact.temp.output.JavaFXApp}">
+      <fileset dir="${meteorite.output.dir}"/>
+    </copy>
+    <fx:fileset id="all_but_JavaFXApp" dir="${artifact.temp.output.JavaFXApp}" includes="**/*.jar">
+      <exclude name="JavaFXApp.jar"/>
+    </fx:fileset>
+    <fx:fileset id="all_JavaFXApp" dir="${artifact.temp.output.JavaFXApp}" includes="**/*.jar"/>
+    <fx:application id="JavaFXApp_id" name="JavaFXApp" mainClass="meteorite.Main"/>
+    <fx:csstobin outdir="${artifact.temp.output.JavaFXApp}">
+      <fileset dir="${artifact.temp.output.JavaFXApp}" includes="**/*.css"/>
+    </fx:csstobin>
+    <fx:jar destfile="${artifact.temp.output.JavaFXApp}\JavaFXApp.jar">
+      <fx:application refid="JavaFXApp_id"/>
+      <fileset dir="${artifact.temp.output.JavaFXApp}" excludes="**/*.jar"/>
+      <fx:resources>
+        <fx:fileset refid="all_but_JavaFXApp"/>
+      </fx:resources>
+      <manifest/>
+    </fx:jar>
+    <fx:deploy width="600" height="400" updatemode="background" outdir="${artifact.temp.output.JavaFXApp}\deploy" outfile="JavaFXApp">
+      <fx:application refid="JavaFXApp_id"/>
+      <fx:resources>
+        <fx:fileset refid="all_JavaFXApp"/>
+      </fx:resources>
+    </fx:deploy>
+    <copy todir="${artifact.output.javafxapp}">
+      <fileset dir="${artifact.temp.output.JavaFXApp}/deploy"/>
+    </copy>
+    <delete includeemptydirs="true">
+      <fileset dir="${artifact.temp.output.JavaFXApp}"/>
+    </delete>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.javafxapp" description="Build all artifacts">
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
