@@ -3,7 +3,7 @@ package meteorite;
 import javafx.animation.Timeline;
 import javafx.scene.media.AudioClip;
 
-public class SoundSystem {
+class SoundSystem {
 
     public static AudioClip BGM;
     public static AudioClip BGM_Start;

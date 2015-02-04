@@ -4,8 +4,8 @@ package meteorite;
  * Created by Alan on 21/1/2015.
  */
 public class Pos_info {
-    public long x;
-    public long y;
+    public final long x;
+    public final long y;
 
     public Pos_info() {
         x = 0;

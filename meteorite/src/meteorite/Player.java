@@ -14,45 +14,45 @@ public class Player {
         this.score = score;
     }
 
-    public void score_up(int incr) {
+    public void scoreUp(int incr) {
         score += incr;
         hitCnt++;
-        PlayController.score_text_static.setText("Scores: " + score);
+        PlayController.scoreText_static.setText("Scores: " + score);
     }
 
     public void checkLv() {
         if (hitCnt >= Main.LV_UP_THRESHOLD * this.lv) {
             lv++;
-            PlayController.lv_text_static.setText("Level: " + lv);
-            Castle.hp_up();
+            PlayController.lvText_static.setText("Level: " + lv);
+            Castle.hpUp();
             GameSystem.message("LEVEL UP");
 
             // get more advanced words
             try {
-                GameSystem.load_to_word_list(lv);
+                GameSystem.loadToWordList(lv);
             } catch (IOException ioE) {
                 System.out.println(ioE);
             }
 
             // create a boss
-            Word boss = new BossWord(new Pos_info((Main.SCREEN.WIDTH - 300) / 2, 0), 1, GameSystem.boss_list.get((int) (Math.random() * GameSystem.boss_list.size())));
+            Word boss = new BossWord(new Pos_info((Main.SCREEN.WIDTH - 300) / 2, 0), GameSystem.bossList.get((int) (Math.random() * GameSystem.bossList.size())));
             boss.drop();
         }
     }
 
-    public int get_lv() {
+    public int getLv() {
         return this.lv;
     }
 
-    public String get_name() {
+    public String getName() {
         return this.name;
     }
 
-    public void set_name(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int get_score() {
+    public int getScore() {
         return this.score;
     }
 }

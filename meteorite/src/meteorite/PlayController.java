@@ -7,7 +7,6 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -23,9 +22,9 @@ public class PlayController {
     public static Timeline genWordTimer_static;
     // Static property for static fx access
     public static Pane playground_static;
-    public static Pane word_layer_static;
-    public static Text score_text_static;
-    public static Text lv_text_static;
+    public static Pane wordLayer_static;
+    public static Text scoreText_static;
+    public static Text lvText_static;
     public static Text msg_static;
     public static VBox castle_static;
     public static VBox endGamePanel_static;
@@ -44,10 +43,6 @@ public class PlayController {
     public static ImageView sphinx_static;
     public static ImageView eiffelTower_static;
     public static ImageView castleImg_static;
-    /* ================ */
-    /* TRACKERS ======= */
-    /* ================ */
-    private Timeline genWordTimer;
     /* ======================= */
     /* VARIABLES AND CONST === */
     /* ======================= */
@@ -56,17 +51,17 @@ public class PlayController {
     @FXML
     private Pane playground;
     @FXML
-    private Pane word_layer;
+    private Pane wordLayer;
     @FXML
-    private Text score_text;
+    private Text scoreText;
     @FXML
-    private Text lv_text;
+    private Text lvText;
     @FXML
     private Text msg;
     @FXML
     private VBox castle;
     @FXML
-    private Rectangle hp_bar;
+    private Rectangle hpBar;
     @FXML
     private Button stopBtn;
     @FXML
@@ -107,9 +102,9 @@ public class PlayController {
         castle_static = castle;
         new Castle();
         playground_static = playground;
-        word_layer_static = word_layer;
-        score_text_static = score_text;
-        lv_text_static = lv_text;
+        wordLayer_static = wordLayer;
+        scoreText_static = scoreText;
+        lvText_static = lvText;
         scoreText_final_static = scoreText_final;
         levelText_final_static = levelText_final;
         playerName_static = playerName;
@@ -118,7 +113,7 @@ public class PlayController {
         saveBtn_static = saveBtn;
         endGamePanel_static = endGamePanel;
         msg_static = msg;
-        hp_bar.widthProperty().bind(Castle.hp_bind);
+        hpBar.widthProperty().bind(Castle.hpBind);
 
         // static variables for external access
         outerTree1_static = outerTree1;
@@ -139,20 +134,20 @@ public class PlayController {
         tf.play();
 
         // Create Player
-        GameSystem.create_player();
+        GameSystem.createPlayer();
 
         // Initialise status
         GameSystem.gameOver = false;
 
         // Load Words + Generate Words
         try {
-            GameSystem.word_list.clear();
-            GameSystem.load_to_word_list(GameSystem.currPlayer.get_lv());
+            GameSystem.wordList.clear();
+            GameSystem.loadToWordList(GameSystem.currPlayer.getLv());
         } catch (IOException e) {
             System.out.println(e);
         } finally {
-            genWordTimer = new Timeline(new KeyFrame(Duration.seconds(Main.GEN_WORD_INTERVAL), e -> {
-                GameSystem.spawn_n_drop_word();
+            Timeline genWordTimer = new Timeline(new KeyFrame(Duration.seconds(Main.GEN_WORD_INTERVAL), e -> {
+                GameSystem.spawn_n_dropWord();
             }));
             genWordTimer.setCycleCount(Timeline.INDEFINITE);
             genWordTimer.play();
@@ -167,13 +162,11 @@ public class PlayController {
             star.getStyleClass().add("star");
             star.setLayoutX(Math.random() * Main.SCREEN.WIDTH);
             star.setLayoutY(Math.random() * (Main.SCREEN.HEIGHT * 0.6));
-            word_layer.getChildren().add(star);
+            wordLayer.getChildren().add(star);
             FadeTransition star_ft = new FadeTransition(Duration.seconds(10), star);
             star_ft.setToValue(0);
             star_ft.setCycleCount(1);
-            star_ft.setOnFinished(ev -> {
-                word_layer.getChildren().remove(star);
-            });
+            star_ft.setOnFinished(ev -> wordLayer.getChildren().remove(star));
             star_ft.play();
         }));
         genStar.setCycleCount(Timeline.INDEFINITE);
@@ -187,7 +180,7 @@ public class PlayController {
 
     @FXML
     public void endGame() {
-        GameSystem.game_end();
+        GameSystem.gameEnd();
     }
 
     @FXML
@@ -199,11 +192,11 @@ public class PlayController {
         panelTT.setOnFinished(e -> {
             // Bug in JavaFx, needa load twice to by-pass loadException
             try {
-                dr.load_scene("start");
+                dr.loadScene("start");
             } catch (Exception ex) {
 //                System.out.println(ex);
                 try {
-                    dr.load_scene("start");
+                    dr.loadScene("start");
                 } catch (Exception ex1) {
                     System.out.println(ex1);
                 }
@@ -218,9 +211,9 @@ public class PlayController {
         if (name.length() > 15) {
             name = name.substring(0, 15) + "...";
         }
-        GameSystem.currPlayer.set_name(name);
+        GameSystem.currPlayer.setName(name);
         try {
-            GameSystem.save_player(GameSystem.currPlayer);
+            GameSystem.savePlayer(GameSystem.currPlayer);
         } catch (IOException ex) {
             System.out.println(ex);
         }

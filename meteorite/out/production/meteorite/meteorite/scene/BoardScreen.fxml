@@ -18,63 +18,59 @@
         <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES"/>
         <RowConstraints maxHeight="192.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES"/>
     </rowConstraints>
-    <children>
-        <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="500.0" GridPane.columnIndex="1">
-            <children>
-                <Text fx:id="rankingTitle" layoutX="250.0" layoutY="150.0" styleClass="title" text="Honor Board"
-                      textAlignment="CENTER" wrappingWidth="284.0">
-                    <VBox.margin>
-                        <Insets/>
-                    </VBox.margin>
-                </Text>
-                <Text fx:id="rankingSubtitle" text="-Top 3-" textAlignment="CENTER" wrappingWidth="284.0">
-                    <VBox.margin>
-                        <Insets bottom="20.0"/>
-                    </VBox.margin>
-                </Text>
-                <VBox fx:id="rankingChart" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                    <children>
-                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
-                            <children>
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-Level-">
-                                    <HBox.margin>
-                                        <Insets left="40.0" right="40.0"/>
-                                    </HBox.margin>
-                                </Text>
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-Name-">
-                                    <HBox.margin>
-                                        <Insets left="40.0" right="40.0"/>
-                                    </HBox.margin>
-                                </Text>
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-Score-">
-                                    <HBox.margin>
-                                        <Insets left="40.0" right="40.0"/>
-                                    </HBox.margin>
-                                </Text>
-                            </children>
-                            <VBox.margin>
-                                <Insets top="20.0"/>
-                            </VBox.margin>
-                        </HBox>
-                    </children>
-                </VBox>
-            </children>
-        </VBox>
-        <HBox alignment="CENTER" prefHeight="265.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-            <children>
-                <!-- Controller dynamically allocated -->
-                <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backToStart" onMouseClicked="#hoverSoundFx"
-                        onMouseEntered="#hoverSoundFx" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                    <styleClass>
-                        <String fx:value="material_btn"/>
-                        <String fx:value="material_btn-big"/>
-                    </styleClass>
-                </Button>
-            </children>
-        </HBox>
-    </children>
 
     <stylesheets>
         <URL value="@../css/master.css"/>
     </stylesheets>
+    <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="500.0" GridPane.columnIndex="1">
+        <children>
+            <Text fx:id="rankingTitle" layoutX="250.0" layoutY="150.0" styleClass="title" text="Honor Board"
+                  textAlignment="CENTER" wrappingWidth="284.0">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </Text>
+            <Text fx:id="rankingSubtitle" text="---" textAlignment="CENTER" wrappingWidth="284.0">
+                <VBox.margin>
+                    <Insets bottom="20.0"/>
+                </VBox.margin>
+            </Text>
+            <VBox fx:id="rankingChart" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                        <VBox.margin>
+                            <Insets top="20.0"/>
+                        </VBox.margin>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-Level-">
+                            <HBox.margin>
+                                <Insets left="40.0" right="40.0"/>
+                            </HBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-Name-">
+                            <HBox.margin>
+                                <Insets left="40.0" right="40.0"/>
+                            </HBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-Score-">
+                            <HBox.margin>
+                                <Insets left="40.0" right="40.0"/>
+                            </HBox.margin>
+                        </Text>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+    <HBox alignment="CENTER" prefHeight="265.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <children>
+            <!-- Controller dynamically allocated -->
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backToStart" onMouseClicked="#hoverSoundFx"
+                    onMouseEntered="#hoverSoundFx" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <styleClass>
+                    <String fx:value="material_btn"/>
+                    <String fx:value="material_btn-big"/>
+                </styleClass>
+            </Button>
+        </children>
+    </HBox>
 </GridPane>

@@ -3,9 +3,7 @@ package meteorite;
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.effect.GaussianBlur;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.BufferedReader;
@@ -15,15 +13,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameSystem {
-    public static ArrayList<Player> player_list = new ArrayList<>();
+class GameSystem {
+    public static final ArrayList<Player> playerList = new ArrayList<>();
     public static Player currPlayer;
     public static boolean gameOver = false;
-    public static ArrayList<String> boss_list = new ArrayList<>();
-    public static ArrayList<String> word_list = new ArrayList<>();
-    public static ArrayList<Word> WORD_OBJ_LIST = new ArrayList<>();
-    private static Text score_text;
-    private static Text lv_text;
+    public static final ArrayList<String> bossList = new ArrayList<>();
+    public static final ArrayList<String> wordList = new ArrayList<>();
+    public static final ArrayList<Word> WORD_OBJ_LIST = new ArrayList<>();
     private static ArrayList<Word> match_word_obj_list = new ArrayList<>();
     private static ArrayList<Word> match_word_obj_list_del = new ArrayList<>();
     private static int match_til_pos = 0;
@@ -32,7 +28,7 @@ public class GameSystem {
     private static boolean partialMatched = false;
     private static boolean gameStopped = false;
 
-    public static void handle_key_press(KeyEvent KE) {
+    public static void handleKeyPress(KeyEvent KE) {
         String key = KE.getText().toUpperCase();
         if (!key.isEmpty()) {
             if (match_word_obj_list.isEmpty()) {
@@ -45,11 +41,11 @@ public class GameSystem {
             }
             // track all matched + visible words
             match_word_obj_list.forEach(w -> {
-                if (w.get_content().startsWith(key, match_til_pos) &&
+                if (w.getContent().startsWith(key, match_til_pos) &&
                         WORD_OBJ_LIST.contains(w)) {
                     partialMatched = true;
-                    w.typed_letter(match_til_pos, true);
-                    if (match_til_pos == w.get_content().length() - 1) {
+                    w.typedLetter(match_til_pos, true);
+                    if (match_til_pos == w.getContent().length() - 1) {
                         wordMatched = true;
                         WORD_OBJ_LIST.remove(w); // remove to retain style
                         if (w instanceof BossWord) {
@@ -60,7 +56,7 @@ public class GameSystem {
                     }
                 } else {
                     match_word_obj_list_del.add(w);
-                    w.typed_letter(0, false);
+                    w.typedLetter(0, false);
                 }
             });
             // some words matched
@@ -69,13 +65,11 @@ public class GameSystem {
             if (wordMatched) {
                 if (bossMatched) {
                     WORD_OBJ_LIST.forEach(all_w -> {
-                        all_w.typed_letter(-1, true);
+                        all_w.typedLetter(-1, true);
                         Castle.shootWord(all_w);
                     });
                 } else {
-                    WORD_OBJ_LIST.forEach(all_w -> {
-                        all_w.typed_letter(0, false);
-                    });
+                    WORD_OBJ_LIST.forEach(all_w -> all_w.typedLetter(0, false));
                 }
                 match_word_obj_list.clear();
             } else {
@@ -84,60 +78,58 @@ public class GameSystem {
         }
     }
 
-    public static void create_player() {
+    public static void createPlayer() {
 //		String playerName = JOptionPane.showInputDialog(null, "Name", "You name:", JOptionPane.QUESTION_MESSAGE);
         currPlayer = new Player(1, "Dummy", 0);
     }
 
-    public static void save_player(Player player) throws FileNotFoundException {
+    public static void savePlayer(Player player) throws FileNotFoundException {
         List<Player> writeList;
-        if (!player_list.isEmpty()) {
-            writeList = (List) player_list.clone();
+        if (!playerList.isEmpty()) {
+            writeList = (List) playerList.clone();
             writeList.add(player);
-            writeList.sort((data1, data2) -> {
-                return (data2.get_score() - data1.get_score());
-            });
+            writeList.sort((data1, data2) -> (data2.getScore() - data1.getScore()));
         } else {
             writeList = new ArrayList<>();
             writeList.add(0, player);
         }
 
-        java.io.File file = new java.io.File(Main.class.getResource("data/player.txt").getFile());
+        java.io.File file = new java.io.File("db/player.txt");
         java.io.PrintWriter output = new java.io.PrintWriter(file);
-        int cnt = 3;
+        int cnt = Main.NUM_RECORDS;
         for (Player p : writeList) {
             cnt--;
             if (cnt < 0) break;
-            player_list.add(p);
-            output.println(p.get_lv() + "," + p.get_name() + "," + p.get_score());
+            playerList.add(p);
+            output.println(p.getLv() + "," + p.getName() + "," + p.getScore());
         }
         output.close();
     }
 
-    public static void load_to_player_list() throws IOException {
-        FileReader fr = new FileReader(Main.class.getResource("data/player.txt").getFile());
+    public static void loadToPlayerList() throws IOException {
+        FileReader fr = new FileReader("db/player.txt");
         BufferedReader br = new BufferedReader(fr);
         String[] linex;
         String line;
         while ((line = br.readLine()) != null) {
             linex = line.split(",");
-            player_list.add(new Player(Integer.parseInt(linex[0].trim()), linex[1], Integer.parseInt(linex[2].trim())));
+            playerList.add(new Player(Integer.parseInt(linex[0].trim()), linex[1], Integer.parseInt(linex[2].trim())));
         }
         fr.close();
     }
 
-    public static void load_to_word_list(int lv) throws IOException {
-        FileReader fr = new FileReader(Main.class.getResource("data/word.txt").getFile());
+    public static void loadToWordList(int lv) throws IOException {
+        FileReader fr = new FileReader("db/word.txt");
         BufferedReader br = new BufferedReader(fr);
         String[] linex;
         int curr_lv = 1;
         String line;
         while ((line = br.readLine()) != null) {
             if (curr_lv == lv) {
-//                word_list.clear();
+//                wordList.clear();
                 linex = line.split(" ");
-                for (int i = 0; i < linex.length; i++) {
-                    word_list.add(linex[i].trim());
+                for (String aLinex : linex) {
+                    wordList.add(aLinex.trim());
                 }
                 break;
             } else curr_lv++;
@@ -145,29 +137,29 @@ public class GameSystem {
         fr.close();
     }
 
-    public static void load_to_boss_list() throws IOException {
-        FileReader fr = new FileReader(Main.class.getResource("data/boss.txt").getFile());
+    public static void loadToBossList() throws IOException {
+        FileReader fr = new FileReader("db/boss.txt");
         BufferedReader br = new BufferedReader(fr);
         String line;
-        boss_list.clear();
+        bossList.clear();
         while ((line = br.readLine()) != null) {
-            boss_list.add(line.trim());
+            bossList.add(line.trim());
         }
         fr.close();
     }
 
-    public static void spawn_n_drop_word() {
+    public static void spawn_n_dropWord() {
         try {
-            load_to_word_list(currPlayer.get_lv());
+            loadToWordList(currPlayer.getLv());
         } catch (IOException ioE) {
             System.out.println(ioE);
         } finally {
-            // safety lock: load_to_word_list may clear word_list before accessing as below
-            if (!word_list.isEmpty()) {
-                int word_index = (int) (Math.random() * word_list.size());
-                int x = (int) (Math.random() * (Main.SCREEN.WIDTH - word_list.get(word_index).length() * 30)) + 10;
+            // safety lock: loadToWordList may clear wordList before accessing as below
+            if (!wordList.isEmpty()) {
+                int word_index = (int) (Math.random() * wordList.size());
+                int x = (int) (Math.random() * (Main.SCREEN.WIDTH - wordList.get(word_index).length() * 30)) + 10;
                 Pos_info temp = new Pos_info(x, 0);
-                Word word = new Word(temp, currPlayer.get_lv(), word_list.get(word_index));
+                Word word = new Word(temp, currPlayer.getLv(), wordList.get(word_index));
                 word.drop();
             }
         }
@@ -184,7 +176,7 @@ public class GameSystem {
         st.play();
     }
 
-    public static void game_end() {
+    public static void gameEnd() {
         if (!gameOver) {
             PlayController.playerName_static.setDisable(false);
             PlayController.homeBtn_static.setDisable(false);
@@ -196,11 +188,11 @@ public class GameSystem {
             PlayController.genWordTimer_static.pause();
             GameSystem.WORD_OBJ_LIST.forEach(w -> {
                 if (w instanceof BossWord) {
-                    ((BossWord) w).drop_tt.pause();
+                    ((BossWord) w).dropTT.pause();
                 } else {
-                    w.drop_tt.pause();
+                    w.dropTT.pause();
                 }
-                w.get_word_obj().setEffect(new GaussianBlur(7));
+                w.getWordObj().setEffect(new GaussianBlur(7));
             });
             Main.STAGE.getScene().setOnKeyPressed(e -> {
             });
@@ -208,8 +200,8 @@ public class GameSystem {
             });
 
             // show final score + level of current player
-            PlayController.scoreText_final_static.setText(Integer.toString(GameSystem.currPlayer.get_score()));
-            PlayController.levelText_final_static.setText(Integer.toString(GameSystem.currPlayer.get_lv()));
+            PlayController.scoreText_final_static.setText(Integer.toString(GameSystem.currPlayer.getScore()));
+            PlayController.levelText_final_static.setText(Integer.toString(GameSystem.currPlayer.getLv()));
 
 
             // translate out the panel showing the result
@@ -226,23 +218,23 @@ public class GameSystem {
             PlayController.genWordTimer_static.play();
             GameSystem.WORD_OBJ_LIST.forEach(w -> {
                 if (w instanceof BossWord) {
-                    ((BossWord)w).drop_tt.play();
+                    ((BossWord)w).dropTT.play();
                 } else {
-                    w.drop_tt.play();
+                    w.dropTT.play();
                 }
-                w.get_word_obj().setEffect(new GaussianBlur(0));
+                w.getWordObj().setEffect(new GaussianBlur(0));
             });
             gameStopped = false;
-            Main.STAGE.getScene().setOnKeyPressed(e -> GameSystem.handle_key_press(e));
+            Main.STAGE.getScene().setOnKeyPressed(GameSystem::handleKeyPress);
         } else {
             PlayController.genWordTimer_static.pause();
             GameSystem.WORD_OBJ_LIST.forEach(w -> {
                 if (w instanceof BossWord) {
-                    ((BossWord) w).drop_tt.pause();
+                    ((BossWord) w).dropTT.pause();
                 } else {
-                    w.drop_tt.pause();
+                    w.dropTT.pause();
                 }
-                w.get_word_obj().setEffect(new GaussianBlur(7));
+                w.getWordObj().setEffect(new GaussianBlur(7));
             });
             PlayController.stopBtn_static.setText("|>");
             gameStopped = true;

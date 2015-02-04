@@ -5,7 +5,7 @@ package meteorite;
  */
 public class Wrapper_info {
     public long width;
-    public long height;
+    public final long height;
 
     public Wrapper_info() {
         width = 0;

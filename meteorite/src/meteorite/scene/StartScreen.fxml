@@ -21,58 +21,56 @@
         <RowConstraints maxHeight="348.0" minHeight="0.0" prefHeight="278.0" vgrow="SOMETIMES"/>
         <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="109.0" vgrow="SOMETIMES"/>
     </rowConstraints>
-    <children>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-            <children>
-                <StackPane prefHeight="150.0" prefWidth="200.0">
-                    <children>
-                        <ImageView fx:id="logo_meteor" fitHeight="464.0" fitWidth="688.0" pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@../img/Logo_meteor.png"/>
-                            </image>
-                        </ImageView>
-                        <ImageView fx:id="logo_text" fitHeight="464.0" fitWidth="688.0" pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@../img/Logo_text.png"/>
-                            </image>
-                        </ImageView>
-                    </children>
-                </StackPane>
-            </children>
-        </HBox>
-        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-            </padding>
-            <children>
-                <Button fx:id="playBtn" mnemonicParsing="false" onAction="#game_start" onMouseClicked="#hoverSoundFx"
-                        onMouseEntered="#hoverSoundFx" styleClass="material_btn, material_btn-big" text="Play"/>
-                <Button fx:id="rankBtn" mnemonicParsing="false" onAction="#show_ranking" onMouseClicked="#hoverSoundFx"
-                        onMouseEntered="#hoverSoundFx" styleClass="material_btn, material_btn-big" text="Honor Board">
-                    <VBox.margin>
-                        <Insets top="10.0"/>
-                    </VBox.margin>
-                </Button>
-            </children>
-        </VBox>
-        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1"
-              GridPane.rowIndex="3">
-            <children>
-                <ToggleButton fx:id="muteBtn" mnemonicParsing="false" onAction="#mute_BGM" styleClass="mute_btn">
-                    <HBox.margin>
-                        <Insets right="20.0"/>
-                    </HBox.margin>
-                </ToggleButton>
-            </children>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="20.0" top="10.0"/>
-            </padding>
-        </HBox>
-    </children>
 
     <stylesheets>
         <URL value="@../css/master.css"/>
     </stylesheets>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+                <children>
+                    <ImageView fx:id="logoMeteor" fitHeight="464.0" fitWidth="688.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <image>
+                            <Image url="@../img/Logo_meteor.png"/>
+                        </image>
+                    </ImageView>
+                    <ImageView fx:id="logoText" fitHeight="464.0" fitWidth="688.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <image>
+                            <Image url="@../img/Logo_text.png"/>
+                        </image>
+                    </ImageView>
+                </children>
+            </StackPane>
+        </children>
+    </HBox>
+    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </padding>
+        <children>
+            <Button fx:id="playBtn" mnemonicParsing="false" onAction="#gameStart" onMouseClicked="#hoverSoundFx"
+                    onMouseEntered="#hoverSoundFx" styleClass="material_btn, material_btn-big" text="Play"/>
+            <Button fx:id="rankBtn" mnemonicParsing="false" onAction="#showRanking" onMouseClicked="#hoverSoundFx"
+                    onMouseEntered="#hoverSoundFx" styleClass="material_btn, material_btn-big" text="Honor Board">
+                <VBox.margin>
+                    <Insets top="10.0"/>
+                </VBox.margin>
+            </Button>
+        </children>
+    </VBox>
+    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1"
+          GridPane.rowIndex="3">
+        <children>
+            <ToggleButton fx:id="muteBtn" mnemonicParsing="false" onAction="#muteBGM" styleClass="mute_btn">
+                <HBox.margin>
+                    <Insets right="20.0"/>
+                </HBox.margin>
+            </ToggleButton>
+        </children>
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="20.0" top="10.0"/>
+        </padding>
+    </HBox>
 </GridPane>
