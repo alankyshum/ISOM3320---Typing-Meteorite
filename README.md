@@ -9,7 +9,10 @@ To make life easier, the compilation work is automated using **ant build**. The 
   * `meteorite.xml`: ant build script
   * `src` directory: all source files
   * `db` directory: data files in txt
-1. (*Optional*) A markdown view to view this README file in full experience.
+1. (*Optional*) A markdown viewer to view this README file in full experience.
+  * Online Viewer: [Dillinger](http://dillinger.io/)
+  * Offline Viewer: Atom with its builtin markdown viewer
+  
 # To Build
 > If you already have ant in path, you can directly run `ant` from command line. Otherwise, you need to specify that in command prompt with full path.
 
@@ -26,7 +29,7 @@ To make life easier, the compilation work is automated using **ant build**. The 
 
 ## Final File Structure
 ```
-__artifacts_temp
+./__artifacts_temp
   |- ./db
     |- word.txt
     |- boss.txt
