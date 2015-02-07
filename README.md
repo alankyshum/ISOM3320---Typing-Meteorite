@@ -1,5 +1,6 @@
 # Typing Meteorite - README
-> ISOM3320 - Spring, 2015
+`Git repo imported from Bitbucket.`
+> ISOM3320 - Spring, 2015, by Teddy Lun, Hona Dopa, Jack Hui, and me.
 
 # Prerequisites
 1. **JDK 1.8+** for the support of *Lambda Expression*. It is assumed that **JRE 1.8+** has also been installed alongside.
